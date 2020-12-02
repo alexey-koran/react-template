@@ -1,0 +1,6 @@
+{
+  "*.+(ts|tsx)": [
+    "npm run prettier:format",
+    "npm run lint:fix-staged"
+  ]
+}
