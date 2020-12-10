@@ -55,7 +55,7 @@ const config: Configuration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif)$/,
         use: [
           {
             loader: 'url-loader',
@@ -80,6 +80,16 @@ const config: Configuration = {
       },
       formStylesRule(false),
       formStylesRule(true),
+      {
+        test: /\.svg$/,
+        loader: 'react-svg-loader',
+        options: {
+          svgo: {
+            plugins: [{ removeUselessStrokeAndFill: false }],
+            floatPrecision: 2,
+          },
+        },
+      },
     ],
   },
   resolve: {
