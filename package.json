@@ -24,8 +24,8 @@
     "lint:fix-staged": "eslint --fix",
     "fix": "run-s prettier:format lint:fix",
     "fix-staged": "lint-staged",
-    "svgo": "svgo --pretty --indent=2 --disable=removeViewBox,mergePaths --enable=inlineStyles  --config '{ \"plugins\": [ { \"inlineStyles\": { \"onlyMatchedOnce\": false } }] }' $FILE",
-    "svgo-all": "svgo -r -f src --pretty --indent=2 --disable=removeViewBox,mergePaths --enable=inlineStyles  --config '{ \"plugins\": [ { \"inlineStyles\": { \"onlyMatchedOnce\": false } }] }' $FILE"
+    "svgo": "cross-env svgo --pretty --indent=2 --disable=removeViewBox,mergePaths --enable=inlineStyles  --config svgo-config.json $FILE",
+    "svgo-all": "cross-env svgo -r -f src --pretty --indent=2 --disable=removeViewBox,mergePaths --enable=inlineStyles  --config svgo-config.json"
   },
   "dependencies": {
     "@babel/core": "^7.11.6",
