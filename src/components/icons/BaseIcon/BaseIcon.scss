@@ -1,0 +1,38 @@
+.icon-body {
+  display: flex;
+  fill: currentColor;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.size-xs {
+  width: 3rem;
+  height: 3rem;
+}
+
+.size-sm {
+  width: 6rem;
+  height: 6rem;
+}
+
+.size-md {
+  width: 8rem;
+  height: 8rem;
+}
+
+.size-lg {
+  width: 10rem;
+  height: 10rem;
+}
+
+.size-xl {
+  width: 15rem;
+  height: 15rem;
+}
+
+.icon-clickable {
+  cursor: pointer;
+}
