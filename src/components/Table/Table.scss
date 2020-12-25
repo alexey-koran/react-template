@@ -1,0 +1,43 @@
+.table-element {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .tr {
+    border-collapse: collapse;
+    border-bottom: 1px solid #bcccdc;
+  }
+
+  .th {
+    margin: 0;
+    padding: 1rem;
+
+    .resizer {
+      display: inline-block;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      background-color: aqua;
+      width: 10px;
+      transform: translateX(50%);
+      touch-action: none;
+
+      &.isResizing {
+        background-color: red;
+      }
+    }
+  }
+
+  .td {
+    margin: 0;
+    padding: 0 1rem;
+  }
+}
+
+.table-pagination {
+  padding: 0.5rem;
+}
