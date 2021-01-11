@@ -46,7 +46,7 @@ function Table<T extends object = {}>({
     useSortBy,
     useBlockLayout,
     useResizeColumns,
-    usePagination
+    usePagination,
   );
 
   useEffect(() => {
@@ -65,7 +65,7 @@ function Table<T extends object = {}>({
                 <div
                   className={styles['th']}
                   {...column.getHeaderProps(
-                    column.getSortByToggleProps({ title: `Sort by ${column.Header!.toString()}` })
+                    column.getSortByToggleProps({ title: `Sort by ${column.Header!.toString()}` }),
                   )}
                 >
                   {column.render('Header')}
@@ -73,7 +73,7 @@ function Table<T extends object = {}>({
                     <div
                       className={classNames(
                         styles['resizer'],
-                        column.isResizing ? styles['isResizing'] : ''
+                        column.isResizing ? styles['isResizing'] : '',
                       )}
                       {...column.getResizerProps({
                         title: `Resize ${column.Header!.toString()} column`,

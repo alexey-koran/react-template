@@ -32,7 +32,7 @@ const BaseIcon: FunctionComponent<BaseIconProps> = ({
       styles['icon-body'],
       size && styles[baseIconSize[size]],
       restProps.onClick && styles['icon-clickable'],
-      className
+      className,
     )}
     {...restProps}
   >
