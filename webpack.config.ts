@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import Dotenv from 'dotenv-webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { Configuration } from 'webpack';
@@ -103,6 +104,7 @@ const config: Configuration = {
     historyApiFallback: true,
   },
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
