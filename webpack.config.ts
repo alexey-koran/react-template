@@ -100,7 +100,9 @@ const config: Configuration = {
     },
   },
   devServer: {
-    contentBase: './src/static',
+    static: {
+      directory: resolve(__dirname, "static"),
+    },
     historyApiFallback: true,
   },
   plugins: [
