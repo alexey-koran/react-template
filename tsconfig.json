@@ -15,7 +15,6 @@
     "rootDir": "./",
     "module": "CommonJS",
     "target": "ES6",
-    "jsx": "react",
-    "jsxFactory": "React.createElement",
+    "jsx": "react-jsx",
   }
 }

@@ -1,7 +1,11 @@
 import classNames from 'classnames';
-import React, { FunctionComponent, HTMLAttributes } from 'react';
 
-import styles from '@/components/icons/BaseIcon/BaseIcon.scss';
+import type {
+  FunctionComponent,
+  HTMLAttributes,
+} from 'react';
+
+import styles from './BaseIcon.scss';
 
 type BaseIconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -21,7 +25,7 @@ export interface BaseIconProps extends HTMLAttributes<HTMLElement> {
   size?: BaseIconSize;
 }
 
-const BaseIcon: FunctionComponent<BaseIconProps> = ({
+export const BaseIcon: FunctionComponent<BaseIconProps> = ({
   size,
   className,
   children,
@@ -39,5 +43,3 @@ const BaseIcon: FunctionComponent<BaseIconProps> = ({
     {children}
   </i>
 );
-
-export default BaseIcon;

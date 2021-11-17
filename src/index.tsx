@@ -1,19 +1,21 @@
 import '@/assets/stylesheets/index.scss';
 
-import React from 'react';
-import { CookiesProvider } from 'react-cookie';
-import ReactDOM from 'react-dom';
+import { StrictMode } from 'react';
+
+import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import App from '@/App';
+import { CookiesProvider } from 'react-cookie';
 
-ReactDOM.render(
-  <React.StrictMode>
+import { App } from '@/App';
+
+render(
+  <StrictMode>
     <BrowserRouter>
       <CookiesProvider>
         <App />
       </CookiesProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('app'),
 );

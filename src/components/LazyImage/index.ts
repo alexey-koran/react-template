@@ -1,3 +1,1 @@
-import LazyImage from '@/components/LazyImage/LazyImage';
-
-export default LazyImage;
+export { LazyImage } from './LazyImage';

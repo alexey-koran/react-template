@@ -1,6 +1,13 @@
 import classNames from 'classnames';
-import type { FunctionComponent, DetailedHTMLProps, ImgHTMLAttributes } from 'react';
-import React, { useEffect } from 'react';
+
+import { useEffect } from 'react';
+
+import type {
+  FunctionComponent,
+  DetailedHTMLProps,
+  ImgHTMLAttributes,
+} from 'react';
+
 import LazyLoad from 'vanilla-lazyload';
 
 if (!document.lazyLoadInstance) {
@@ -15,7 +22,7 @@ interface LazyImageProps
   alt: string;
 }
 
-const LazyImage: FunctionComponent<LazyImageProps> = ({
+export const LazyImage: FunctionComponent<LazyImageProps> = ({
   src,
   srcSet,
   sizes,
@@ -38,5 +45,3 @@ const LazyImage: FunctionComponent<LazyImageProps> = ({
     />
   );
 };
-
-export default LazyImage;

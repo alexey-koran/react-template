@@ -36,7 +36,7 @@ const formStylesRule = (useModules = false) => ({
 
 const config: Configuration = {
   mode: isProduction ? 'production' : 'development',
-  devtool: isProduction ? false : 'source-map',
+  devtool: isProduction ? 'source-map' : 'eval',
   entry: './src/index.tsx',
   output: {
     path: resolve(__dirname, 'build'),
