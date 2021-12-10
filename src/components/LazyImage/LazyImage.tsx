@@ -1,14 +1,12 @@
 import classNames from 'classnames';
+import LazyLoad from 'vanilla-lazyload';
 
 import { useEffect } from 'react';
-
 import type {
   FunctionComponent,
   DetailedHTMLProps,
   ImgHTMLAttributes,
 } from 'react';
-
-import LazyLoad from 'vanilla-lazyload';
 
 if (!document.lazyLoadInstance) {
   document.lazyLoadInstance = new LazyLoad({

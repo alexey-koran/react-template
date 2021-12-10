@@ -1,6 +1,6 @@
-import { LazyImage } from '@/components/LazyImage';
-
 import styles from './LazyImagesExample.scss';
+
+import { LazyImage } from '@/components/LazyImage';
 
 export const LazyImagesExample = (): JSX.Element => (
   <div className={styles['images-wrapper']}>

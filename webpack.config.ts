@@ -1,11 +1,11 @@
-import { resolve } from 'path';
-
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { Configuration } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+
+import { resolve } from 'path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isAnalyze = process.env.analyze;
@@ -101,7 +101,7 @@ const config: Configuration = {
   },
   devServer: {
     static: {
-      directory: resolve(__dirname, "static"),
+      directory: resolve(__dirname, 'static'),
     },
     historyApiFallback: true,
   },

@@ -1,11 +1,10 @@
 import '@/assets/stylesheets/index.scss';
 
-import { StrictMode } from 'react';
-
+import { CookiesProvider } from 'react-cookie';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import { CookiesProvider } from 'react-cookie';
+import { StrictMode } from 'react';
 
 import { App } from '@/App';
 

@@ -5,15 +5,16 @@
     "node": true
   },
   "extends": [
-    "airbnb-typescript",
+    "airbnb",
     "airbnb/hooks",
+    "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": "tsconfig.json",
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
@@ -77,6 +78,7 @@
       }
     ],
     "@typescript-eslint/dot-notation": "off",
+    "import/prefer-default-export": "off",
     "arrow-parens": [
       "error",
       "as-needed"
@@ -101,8 +103,21 @@
     ],
     "id-match": "error",
     "import/order": ["error", {
-      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
-      "pathGroups": [
+      "groups": [
+        "external",
+        "builtin",
+        "index",
+        "sibling",
+        "parent",
+        "object",
+        "type",
+        "internal"
+      ],
+      "pathGroups": [{
+          "pattern": "react",
+          "group": "builtin",
+          "position": "before"
+        },
         {
           "pattern": "@/**/*.pcss",
           "group": "index"
@@ -112,6 +127,7 @@
           "group": "internal"
         }
       ],
+      "pathGroupsExcludedImportTypes": ["react"],
       "newlines-between": "always",
       "alphabetize": {
         "order": "asc",
@@ -151,6 +167,7 @@
     ],
     "radix": "error",
     "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [1, {
@@ -159,6 +176,7 @@
     ],
     "react/jsx-fragments" : ["error", "element"],
     "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": "off",
     "react/require-default-props": "off",
     "space-before-function-paren": [
       "error",
