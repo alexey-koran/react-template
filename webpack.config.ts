@@ -1,14 +1,18 @@
+import { resolve } from 'path';
+
+import type { Configuration as WebpackConfiguration } from 'webpack';
+import type { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { Configuration } from 'webpack';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-
-import { resolve } from 'path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isAnalyze = process.env.analyze;
+
+type Configuration = WebpackConfiguration & WebpackDevServerConfiguration;
 
 const nothing = () => {};
 
