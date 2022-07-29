@@ -55,8 +55,8 @@ const config: Configuration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        test: /\.(ts|tsx)$/,
+        loader: 'ts-loader',
         exclude: /node_modules/,
       },
       {
@@ -105,7 +105,7 @@ const config: Configuration = {
   },
   devServer: {
     static: {
-      directory: resolve(__dirname, 'static'),
+      directory: resolve(__dirname, 'src/static'),
     },
     historyApiFallback: true,
   },
