@@ -156,7 +156,7 @@
       "single"
     ],
     "dot-notation":"off",
-    "no-console": "error",
+    "no-console": "warn",
     "no-alert": "error",
     "no-var": "error",
     "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
@@ -183,7 +183,7 @@
       "extensions": [".ts", ".tsx"]
       }
     ],
-    "react/jsx-fragments" : ["error", "element"],
+    "react/jsx-fragments" : ["error", "syntax"],
     "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": "off",
     "react/require-default-props": "off",
