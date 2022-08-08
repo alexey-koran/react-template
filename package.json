@@ -25,8 +25,8 @@
     "lint:fix-staged": "eslint --fix",
     "fix": "run-s prettier:format lint:fix",
     "fix-staged": "lint-staged",
-    "svgo": "cross-env svgo --pretty --indent=2 --disable=removeViewBox,mergePaths --enable=inlineStyles  --config svgo-config.json $FILE",
-    "svgo-all": "cross-env svgo -r -f src --pretty --indent=2 --disable=removeViewBox,mergePaths --enable=inlineStyles  --config svgo-config.json"
+    "svgo": "cross-env svgo $FILE",
+    "svgo-all": "cross-env svgo -r -f src"
   },
   "dependencies": {
     "@babel/core": "^7.18.9",

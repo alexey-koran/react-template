@@ -1,9 +1,0 @@
-{
-  "plugins": [
-    {
-      "inlineStyles": {
-        "onlyMatchedOnce": false
-      }
-    }
-  ]
-}
