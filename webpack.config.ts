@@ -16,36 +16,18 @@ type Configuration = WebpackConfiguration & WebpackDevServerConfiguration;
 
 const nothing = () => {};
 
-const formStylesRule = (useModules = false) => ({
-  test: /\.(css|scss|sass)$/,
-  [useModules ? 'exclude' : 'include']: /assets\/stylesheets|node_modules/,
-  use: [
-    isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-    {
-      loader: 'css-loader',
-      options: {
-        url: false,
-        importLoaders: 1,
-        sourceMap: true,
-        ...(useModules && {
-          modules: {
-            localIdentName: '[local]-[hash:base64:5]',
-          },
-        }),
-      },
-    },
-    'sass-loader',
-  ],
-});
-
 const config: Configuration = {
   mode: isProduction ? 'production' : 'development',
   devtool: isProduction ? 'source-map' : 'eval',
   entry: './src/index.tsx',
   output: {
     path: resolve(__dirname, 'build'),
-    publicPath: '/',
-    filename: 'bundle.js',
+    filename: '[name].js',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
@@ -83,17 +65,24 @@ const config: Configuration = {
           },
         ],
       },
-      formStylesRule(false),
-      formStylesRule(true),
+      {
+        test: /\.(css)$/,
+        exclude: /assets\/stylesheets|node_modules/,
+        use: [
+          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              importLoaders: 1,
+              sourceMap: true,
+            },
+          },
+        ],
+      },
       {
         test: /\.svg$/,
-        loader: 'react-svg-loader',
-        options: {
-          svgo: {
-            plugins: [{ removeUselessStrokeAndFill: false }],
-            floatPrecision: 2,
-          },
-        },
+        loader: '@svgr/webpack',
       },
     ],
   },
@@ -112,7 +101,7 @@ const config: Configuration = {
   plugins: [
     new Dotenv(),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './src/public/index.html',
     }),
     new MiniCssExtractPlugin({
       chunkFilename: '[id].css',

@@ -1,20 +1,13 @@
-import '@/assets/stylesheets/index.scss';
-
-import { CookiesProvider } from 'react-cookie';
-import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 
 import { StrictMode } from 'react';
 
 import { App } from '@/App';
 
-render(
+const container = document.getElementById('app');
+const root = createRoot(container!);
+root.render(
   <StrictMode>
-    <BrowserRouter>
-      <CookiesProvider>
-        <App />
-      </CookiesProvider>
-    </BrowserRouter>
+    <App />
   </StrictMode>,
-  document.getElementById('app'),
 );
