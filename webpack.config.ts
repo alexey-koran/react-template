@@ -66,8 +66,8 @@ const config: Configuration = {
         ],
       },
       {
-        test: /\.(css)$/,
-        exclude: /assets\/stylesheets|node_modules/,
+        test: /\.(css|pcss)$/,
+        exclude: /node_modules/,
         use: [
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           {
@@ -75,6 +75,12 @@ const config: Configuration = {
             options: {
               url: false,
               importLoaders: 1,
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
               sourceMap: true,
             },
           },

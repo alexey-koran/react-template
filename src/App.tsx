@@ -1,3 +1,7 @@
-import Icon from '@/assets/svg/test.svg';
+import './test.pcss';
 
-export const App = (): JSX.Element => <Icon />;
+export const App = (): JSX.Element => (
+  <div className='test'>
+    Testasdas
+  </div>
+);
