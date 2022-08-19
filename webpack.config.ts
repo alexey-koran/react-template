@@ -82,6 +82,7 @@ const config: Configuration = {
       },
       {
         test: /\.svg$/,
+        issuer: /\.[jt]sx?$/,
         loader: '@svgr/webpack',
       },
     ],

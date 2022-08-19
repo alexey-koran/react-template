@@ -1,1 +1,3 @@
-export const App = (): JSX.Element => <div>Hi bro!</div>;
+import Icon from '@/assets/svg/test.svg';
+
+export const App = (): JSX.Element => <Icon />;
