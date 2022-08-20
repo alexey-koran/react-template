@@ -42,17 +42,8 @@ const config: Configuration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              name: isProduction ? '[contenthash].[ext]' : '[name].[ext]',
-              outputPath: 'static/images',
-            },
-          },
-        ],
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
