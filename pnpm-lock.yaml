@@ -19,6 +19,7 @@ specifiers:
   autoprefixer: ^10.4.8
   babel-loader: ^8.2.5
   babel-plugin-module-resolver: ^4.1.0
+  classnames: ^2.3.1
   copy-webpack-plugin: ^11.0.0
   cross-env: ^7.0.3
   css-loader: ^6.7.1
@@ -61,6 +62,7 @@ specifiers:
 
 dependencies:
   autoprefixer: 10.4.8_postcss@8.4.16
+  classnames: 2.3.1
   postcss-preset-env: 7.8.0_postcss@8.4.16
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2860,6 +2862,10 @@ packages:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
     engines: {node: '>=6.0'}
     dev: true
+
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
+    dev: false
 
   /clean-css/5.3.1:
     resolution: {integrity: sha512-lCr8OHhiWCTw4v8POJovCoh4T7I9U11yVsPjMWWnnMmp9ZowCxyad1Pathle/9HjaDp+fdQKjO9fQydE6RHTZg==}
