@@ -4,5 +4,8 @@ module.exports = {
     'tailwindcss/nesting': {},
     tailwindcss: {},
     'postcss-preset-env': {},
+    'postcss-assets': {
+      loadPaths: ['**'],
+    },
   },
 };
