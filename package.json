@@ -36,7 +36,7 @@
     "@tanstack/react-location": "3.7.4",
     "@types/dotenv-webpack": "^7.0.3",
     "@types/html-webpack-plugin": "^3.2.6",
-    "@types/node": "^18.7.6",
+    "@types/node": "^18.7.8",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/webpack": "^5.28.0",
