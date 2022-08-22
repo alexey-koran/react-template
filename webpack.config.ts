@@ -42,7 +42,7 @@ const config: Configuration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
+        test: /\.(png|jpg|jpeg|gif|webp|woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
       {
