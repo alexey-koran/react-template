@@ -33,7 +33,6 @@
     "@babel/preset-react": "^7.18.6",
     "@svgr/core": "^6.3.1",
     "@svgr/webpack": "^6.3.1",
-    "@tanstack/react-location": "3.7.4",
     "@types/dotenv-webpack": "^7.0.3",
     "@types/html-webpack-plugin": "^3.2.6",
     "@types/node": "^18.7.8",
@@ -85,6 +84,7 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
+    "@tanstack/react-location": "^3.7.4",
     "autoprefixer": "^10.4.8",
     "classnames": "^2.3.1",
     "react": "^18.2.0",
