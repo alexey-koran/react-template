@@ -13,8 +13,8 @@
     "url": "git+https://github.com/alexey-koran/bundlers-boilerplates.git"
   },
   "scripts": {
-    "dev": "webpack serve --open --color --hot --mode=development",
-    "prod": "cross-env NODE_ENV=production webpack serve --open --color --hot --mode=production",
+    "dev": "webpack serve --color --hot --mode=development",
+    "prod": "cross-env NODE_ENV=production webpack serve --color --hot --mode=production",
     "build": "cross-env NODE_ENV=production webpack --mode=production",
     "clean": "rm -f -r build",
     "analyze": "cross-env analyze=true NODE_ENV=production webpack --mode=production",
