@@ -1406,8 +1406,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.9
     dev: true
 
-  /@csstools/postcss-cascade-layers/1.1.0_postcss@8.4.16:
-    resolution: {integrity: sha512-XpA7g2KViA2ia23A5kZ/EQw+Sy308kLbvMlDPjFZmojwaJ9DYdJuwujFcDGK9v1QhHRmMEHbV2brVSQSLkN/7A==}
+  /@csstools/postcss-cascade-layers/1.1.1_postcss@8.4.16:
+    resolution: {integrity: sha512-+KdYrpKC5TgomQr2DlZF4lDEpHcoxnj5IGddYYfBWJAKfj1JtuHUIqMa+E1pJJ+z3kvDViWMqyqPlG4Ja7amQA==}
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
@@ -2671,7 +2671,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001400
+      caniuse-lite: 1.0.30001402
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2828,8 +2828,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001400
-      electron-to-chromium: 1.4.251
+      caniuse-lite: 1.0.30001402
+      electron-to-chromium: 1.4.254
       node-releases: 2.0.6
       update-browserslist-db: 1.0.9_browserslist@4.21.4
 
@@ -2921,8 +2921,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001400:
-    resolution: {integrity: sha512-Mv659Hn65Z4LgZdJ7ge5JTVbE3rqbJaaXgW5LEI9/tOaXclfIZ8DW7D7FCWWWmWiiPS7AC48S8kf3DApSxQdgA==}
+  /caniuse-lite/1.0.30001402:
+    resolution: {integrity: sha512-Mx4MlhXO5NwuvXGgVb+hg65HZ+bhUYsz8QtDGDo2QmaJS2GBX47Xfi2koL86lc8K+l+htXeTEB/Aeqvezoo6Ew==}
 
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -3503,8 +3503,8 @@ packages:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
     dev: true
 
-  /electron-to-chromium/1.4.251:
-    resolution: {integrity: sha512-k4o4cFrWPv4SoJGGAydd07GmlRVzmeDIJ6MaEChTUjk4Dmomn189tCicSzil2oyvbPoGgg2suwPDNWq4gWRhoQ==}
+  /electron-to-chromium/1.4.254:
+    resolution: {integrity: sha512-Sh/7YsHqQYkA6ZHuHMy24e6TE4eX6KZVsZb9E/DvU1nQRIrH4BflO/4k+83tfdYvDl+MObvlqHPRICzEdC9c6Q==}
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -6020,7 +6020,7 @@ packages:
     peerDependencies:
       postcss: ^8.2
     dependencies:
-      '@csstools/postcss-cascade-layers': 1.1.0_postcss@8.4.16
+      '@csstools/postcss-cascade-layers': 1.1.1_postcss@8.4.16
       '@csstools/postcss-color-function': 1.1.1_postcss@8.4.16
       '@csstools/postcss-font-format-keywords': 1.0.1_postcss@8.4.16
       '@csstools/postcss-hwb-function': 1.0.2_postcss@8.4.16
