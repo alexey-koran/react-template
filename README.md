@@ -8,3 +8,5 @@ Installation by npm
 ```
 
 Over installation methods look via link above
+
+Minimum Node.js 14
