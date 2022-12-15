@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "outDir": "./build/",
+    "rootDir": "./",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES6",
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "allowJs": true,
+    "allowUnreachableCode": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true
+  }
+}

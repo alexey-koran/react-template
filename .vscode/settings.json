@@ -1,0 +1,9 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto",
+    }
+  ],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal"
+}
