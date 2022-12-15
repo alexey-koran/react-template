@@ -22,11 +22,24 @@ const config: Configuration = {
   entry: './src/index.tsx',
   output: {
     path: resolve(__dirname, 'build'),
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
   },
   optimization: {
+    runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 1,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
     },
   },
   module: {

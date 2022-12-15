@@ -15,8 +15,9 @@
   "scripts": {
     "dev": "webpack serve --color --hot --mode=development",
     "prod": "cross-env NODE_ENV=production webpack serve --color --hot --mode=production",
-    "build": "cross-env NODE_ENV=production webpack --mode=production",
     "clean": "rm -f -r build",
+    "buildapp": "cross-env NODE_ENV=production webpack --mode=production",
+    "build": "run-s clean buildapp",
     "analyze": "cross-env analyze=true NODE_ENV=production webpack --mode=production",
     "prettier:format": "prettier --write \"**/*.+(ts|tsx)\"",
     "lint": "eslint src/",
