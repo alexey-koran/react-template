@@ -1,6 +1,6 @@
 {
   "name": "bundlers-boilerplates",
-  "version": "0.3.0",
+  "version": "1.0.1",
   "description": "Webpack react+typescript boilerplate",
   "main": "src/index.tsx",
   "author": "Alexey-Koran",
