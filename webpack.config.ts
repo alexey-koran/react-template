@@ -18,7 +18,7 @@ const nothing = () => {};
 
 const config: Configuration = {
   mode: isProduction ? 'production' : 'development',
-  devtool: isProduction ? 'source-map' : 'eval',
+  devtool: isProduction ? false : 'eval-source-map',
   entry: './src/index.tsx',
   output: {
     path: resolve(__dirname, 'build'),
