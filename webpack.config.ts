@@ -104,7 +104,7 @@ const config: Configuration = {
     }),
     new MiniCssExtractPlugin({
       chunkFilename: '[id].css',
-      filename: '[name].css',
+      filename: '[name].[contenthash].css',
     }),
     isAnalyze ? new BundleAnalyzerPlugin() : nothing,
     isProduction
