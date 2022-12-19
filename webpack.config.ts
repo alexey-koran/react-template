@@ -67,14 +67,14 @@ const config: Configuration = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              sourceMap: true,
+              modules: {
+                auto: true,
+                localIdentName: isProduction ? '[hash:base64]': '[name]-[local]-[hash:base64:8]',
+              },
             },
           },
           {
             loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-            },
           },
         ],
       },
@@ -103,8 +103,8 @@ const config: Configuration = {
       template: './src/public/index.html',
     }),
     new MiniCssExtractPlugin({
-      chunkFilename: '[id].css',
-      filename: '[name].[contenthash].css',
+      filename: isProduction ? '[name].[contenthash].css' : '[name].css',
+      chunkFilename: isProduction ? '[id].[contenthash].css' : '[id].css',
     }),
     isAnalyze ? new BundleAnalyzerPlugin() : nothing,
     isProduction
