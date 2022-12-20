@@ -12,7 +12,6 @@ specifiers:
   '@types/react': ^18.0.26
   '@types/react-dom': ^18.0.9
   '@types/webpack': ^5.28.0
-  '@types/webpack-bundle-analyzer': ^4.6.0
   '@typescript-eslint/eslint-plugin': ^5.47.0
   '@typescript-eslint/parser': ^5.47.0
   autoprefixer: ^10.4.13
@@ -75,7 +74,6 @@ devDependencies:
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
   '@types/webpack': 5.28.0_webpack-cli@5.0.1
-  '@types/webpack-bundle-analyzer': 4.6.0_webpack-cli@5.0.1
   '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
   '@typescript-eslint/parser': 5.47.0_lzzuuodtsqwxnvqeq4g4likcqa
   babel-loader: 9.1.0_ztqwsvkb6z73luspkai6ilstpu
@@ -2060,19 +2058,6 @@ packages:
     resolution: {integrity: sha512-GkewRA4i5oXacU/n4MA9+bLgt5/L3F1mKrYvFGm7r2ouLXhRKjuWwo9XHNnbx6WF3vlGW21S3fCvgqxvxXXc5g==}
     dependencies:
       source-map: 0.6.1
-    dev: true
-
-  /@types/webpack-bundle-analyzer/4.6.0_webpack-cli@5.0.1:
-    resolution: {integrity: sha512-XeQmQCCXdZdap+A/60UKmxW5Mz31Vp9uieGlHB3T4z/o2OLVLtTI3bvTuS6A2OWd/rbAAQiGGWIEFQACu16szA==}
-    dependencies:
-      '@types/node': 18.11.17
-      tapable: 2.2.1
-      webpack: 5.75.0_webpack-cli@5.0.1
-    transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - uglify-js
-      - webpack-cli
     dev: true
 
   /@types/webpack-sources/3.2.0:

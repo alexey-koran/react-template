@@ -14,11 +14,11 @@
   },
   "scripts": {
     "dev": "webpack serve --color --hot --mode=development",
-    "prod": "cross-env NODE_ENV=production webpack serve --color --hot --mode=production",
+    "prod": "webpack serve --color --hot --mode=production",
     "clean": "rm -f -r build",
-    "buildapp": "cross-env NODE_ENV=production webpack --mode=production",
+    "buildapp": "webpack --mode=production",
     "build": "run-s clean buildapp",
-    "analyze": "cross-env analyze=true NODE_ENV=production webpack --mode=production",
+    "analyze": "webpack --analyze --mode=production",
     "prepare": "husky install",
     "prettier:format": "prettier --write \"**/*.+(ts|tsx)\"",
     "lint": "eslint src/",
@@ -27,7 +27,7 @@
     "fix": "run-s prettier:format lint:fix",
     "fix-staged": "lint-staged",
     "svgo": "cross-env svgo $FILE",
-    "svgo-all": "cross-env svgo -r -f src"
+    "svgo-all": "svgo -r -f src"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
@@ -41,7 +41,6 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@types/webpack": "^5.28.0",
-    "@types/webpack-bundle-analyzer": "^4.6.0",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
     "babel-loader": "^9.1.0",
