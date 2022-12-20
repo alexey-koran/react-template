@@ -22,7 +22,8 @@ const config: Configuration = {
   entry: './src/index.tsx',
   output: {
     path: resolve(__dirname, 'build'),
-    filename: '[name].[contenthash].js',
+    filename: 'js/[name].[contenthash].js',
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
   optimization: {
     runtimeChunk: 'single',
@@ -69,7 +70,7 @@ const config: Configuration = {
               importLoaders: 1,
               modules: {
                 auto: true,
-                localIdentName: isProduction ? '[hash:base64]': '[name]-[local]-[hash:base64:8]',
+                localIdentName: isProduction ? '[hash:base64]' : '[name]-[local]-[hash:base64:8]',
               },
             },
           },
@@ -103,8 +104,8 @@ const config: Configuration = {
       template: './src/public/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: isProduction ? '[name].[contenthash].css' : '[name].css',
-      chunkFilename: isProduction ? '[id].[contenthash].css' : '[id].css',
+      filename: isProduction ? 'css/[name].[contenthash].css' : 'css/[name].css',
+      chunkFilename: isProduction ? 'css/[id].[contenthash].css' : 'css/[id].css',
     }),
     isAnalyze ? new BundleAnalyzerPlugin() : nothing,
     isProduction
