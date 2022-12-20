@@ -9,4 +9,4 @@ Installation by npm
 
 Over installation methods look via link above
 
-Minimum Node.js 14
+Minimum Node.js 14.18.0
