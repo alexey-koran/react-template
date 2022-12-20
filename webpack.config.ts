@@ -14,8 +14,6 @@ const isAnalyze = process.env.analyze;
 
 type Configuration = WebpackConfiguration & WebpackDevServerConfiguration;
 
-const nothing = () => {};
-
 const config: Configuration = {
   mode: isProduction ? 'production' : 'development',
   devtool: isProduction ? false : 'eval-source-map',
@@ -117,10 +115,10 @@ const config: Configuration = {
       filename: isProduction ? 'css/[name].[contenthash].css' : 'css/[name].css',
       chunkFilename: isProduction ? 'css/[id].[contenthash].css' : 'css/[id].css',
     }),
-    isAnalyze ? new BundleAnalyzerPlugin() : nothing,
-    isProduction
-      ? new CopyWebpackPlugin({ patterns: [{ from: './src/static', to: '.' }] })
-      : nothing,
+    ...(isAnalyze ? [new BundleAnalyzerPlugin()] : []),
+    ...(isProduction
+      ? [new CopyWebpackPlugin({ patterns: [{ from: './src/static', to: '.' }] })]
+      : []),
   ],
 };
 
