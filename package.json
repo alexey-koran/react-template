@@ -1,16 +1,16 @@
 {
-  "name": "bundlers-boilerplates",
-  "version": "1.0.1",
-  "description": "Webpack react+typescript boilerplate",
+  "name": "webpack-boilerplate",
+  "version": "1.0.2",
+  "description": "Webpack react and typescript boilerplate",
   "main": "src/index.tsx",
   "author": "Alexey-Koran",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexey-koran/bundlers-boilerplates/issues"
+    "url": "https://github.com/alexey-koran/webpack-boilerplate/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexey-koran/bundlers-boilerplates.git"
+    "url": "git+https://github.com/alexey-koran/webpack-boilerplate.git"
   },
   "scripts": {
     "dev": "webpack serve --color --hot --mode=development",
