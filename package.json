@@ -19,6 +19,7 @@
     "buildapp": "cross-env NODE_ENV=production webpack --mode=production",
     "build": "run-s clean buildapp",
     "analyze": "cross-env analyze=true NODE_ENV=production webpack --mode=production",
+    "prepare": "husky install",
     "prettier:format": "prettier --write \"**/*.+(ts|tsx)\"",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
