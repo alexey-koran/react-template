@@ -111,8 +111,11 @@ const config = (env: Env, options: Options): Configuration => {
         },
         {
           test: /\.svg$/,
-          issuer: /\.[jt]sx?$/,
-          loader: '@svgr/webpack',
+          issuer: /\.tsx?$/,
+          use: [{ loader: '@svgr/webpack' }],
+          generator: {
+            filename: 'svg/[hash][ext][query]',
+          },
         },
       ],
     },
