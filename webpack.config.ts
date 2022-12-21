@@ -1,5 +1,6 @@
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
+import { ESBuildMinifyPlugin } from 'esbuild-loader';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -38,6 +39,11 @@ const config = (env: Env, options: Options): Configuration => {
 
     optimization: {
       runtimeChunk: 'single',
+      minimizer: [
+        new ESBuildMinifyPlugin({
+          target: 'es2015',
+        }),
+      ],
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
@@ -58,14 +64,13 @@ const config = (env: Env, options: Options): Configuration => {
     module: {
       rules: [
         {
-          test: /\.(js|jsx|ts|tsx)$/,
-          use: 'babel-loader',
-          exclude: /node_modules/,
-        },
-        {
           test: /\.(ts|tsx)$/,
-          loader: 'ts-loader',
+          loader: 'esbuild-loader',
           exclude: /node_modules/,
+          options: {
+            loader: 'tsx',
+            target: 'es2015',
+          },
         },
         {
           test: /\.(png|jpg|jpeg|gif|webp)$/i,
