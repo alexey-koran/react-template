@@ -1,6 +1,7 @@
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
 import { ESBuildMinifyPlugin } from 'esbuild-loader';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -133,13 +134,8 @@ const config = (env: Env, options: Options): Configuration => {
         filename: isProduction ? 'css/[name].[contenthash].css' : 'css/[name].css',
         chunkFilename: isProduction ? 'css/[id].[contenthash].css' : 'css/[id].css',
       }),
-      ...(isAnalyze
-        ? [
-          new BundleAnalyzerPlugin({
-            analyzerPort: 8081,
-          }),
-        ]
-        : []),
+      ...(isDevelopment ? [new ForkTsCheckerWebpackPlugin()] : []),
+      ...(isAnalyze ? [new BundleAnalyzerPlugin({ analyzerPort: 8081 })] : []),
       ...(isProduction
         ? [new CopyWebpackPlugin({ patterns: [{ from: './src/static', to: '.' }] })]
         : []),
