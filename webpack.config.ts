@@ -42,6 +42,8 @@ const config = (env: Env, options: Options): Configuration => {
       minimizer: [
         new ESBuildMinifyPlugin({
           target: 'es2015',
+          jsx: 'automatic',
+          css: true,
         }),
       ],
       splitChunks: {
