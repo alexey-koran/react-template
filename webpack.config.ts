@@ -2,6 +2,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import { resolve } from 'path';
 
@@ -10,6 +11,7 @@ import type { Configuration as WebpackDevServerConfiguration } from 'webpack-dev
 
 interface AdditionalOptions {
   hot?: boolean;
+  analyze?: boolean;
 }
 
 type Env = Record<string, boolean> | undefined;
@@ -20,6 +22,7 @@ const config = (env: Env, options: Options): Configuration => {
   const isProduction = options.mode === 'production';
   const isDevelopment = options.mode === 'development';
   const isDevServer = isDevelopment && options?.hot;
+  const isAnalyze = isDevelopment && options?.analyze;
 
   const appConfig: Configuration = {
     mode: isProduction ? 'production' : 'development',
@@ -123,6 +126,13 @@ const config = (env: Env, options: Options): Configuration => {
         filename: isProduction ? 'css/[name].[contenthash].css' : 'css/[name].css',
         chunkFilename: isProduction ? 'css/[id].[contenthash].css' : 'css/[id].css',
       }),
+      ...(isAnalyze
+        ? [
+          new BundleAnalyzerPlugin({
+            analyzerPort: 8081,
+          }),
+        ]
+        : []),
       ...(isProduction
         ? [new CopyWebpackPlugin({ patterns: [{ from: './src/static', to: '.' }] })]
         : []),
