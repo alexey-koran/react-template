@@ -3,7 +3,9 @@ module.exports = {
     'postcss-import': {},
     'tailwindcss/nesting': {},
     tailwindcss: {},
-    'postcss-preset-env': {},
+    'postcss-preset-env': {
+      features: { 'nesting-rules': false },
+    },
     'postcss-assets': {
       loadPaths: ['**'],
     },
