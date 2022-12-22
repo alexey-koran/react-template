@@ -12,7 +12,7 @@ specifiers:
   '@types/webpack-bundle-analyzer': ^4.6.0
   '@typescript-eslint/eslint-plugin': ^5.47.0
   '@typescript-eslint/parser': ^5.47.0
-  classnames: ^2.3.2
+  clsx: ^1.2.1
   copy-webpack-plugin: ^11.0.0
   cross-env: ^7.0.3
   css-loader: ^6.7.3
@@ -54,7 +54,6 @@ specifiers:
   webpack-dev-server: ^4.11.1
 
 dependencies:
-  classnames: 2.3.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -70,6 +69,7 @@ devDependencies:
   '@types/webpack-bundle-analyzer': 4.6.0_webpack-cli@5.0.1
   '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
   '@typescript-eslint/parser': 5.47.0_lzzuuodtsqwxnvqeq4g4likcqa
+  clsx: 1.2.1
   copy-webpack-plugin: 11.0.0_webpack@5.75.0
   cross-env: 7.0.3
   css-loader: 6.7.3_webpack@5.75.0
@@ -2939,10 +2939,6 @@ packages:
     engines: {node: '>=6.0'}
     dev: true
 
-  /classnames/2.3.2:
-    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
-    dev: false
-
   /clean-css/5.3.1:
     resolution: {integrity: sha512-lCr8OHhiWCTw4v8POJovCoh4T7I9U11yVsPjMWWnnMmp9ZowCxyad1Pathle/9HjaDp+fdQKjO9fQydE6RHTZg==}
     engines: {node: '>= 10.0'}
@@ -2985,6 +2981,11 @@ packages:
       is-plain-object: 2.0.4
       kind-of: 6.0.3
       shallow-clone: 3.0.1
+    dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: true
 
   /color-convert/1.9.3:
