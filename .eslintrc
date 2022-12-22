@@ -84,6 +84,7 @@
     ],
     "@typescript-eslint/dot-notation": "off",
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "arrow-parens": [
       "error",
       "as-needed"
