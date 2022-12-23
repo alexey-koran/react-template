@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "formulahendry.auto-rename-tag",
+    "clinyong.vscode-css-modules",
+    "heybourn.headwind",
+    "cpylua.language-postcss",
+    "SonarSource.sonarlint-vscode",
+    "dannyconnell.split-html-attributes",
+    "bradlc.vscode-tailwindcss",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-russian",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+}
