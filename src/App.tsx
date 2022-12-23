@@ -1,5 +1,1 @@
-export const App = (): JSX.Element => (
-  <div className='test'>
-    Testasdas
-  </div>
-);
+export const App = (): JSX.Element => <div className='test'>Test</div>;

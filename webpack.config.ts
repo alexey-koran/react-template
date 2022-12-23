@@ -156,9 +156,9 @@ const config = (_env: Env, options: Options): Configuration => {
 
   return isDevServer
     ? {
-      ...appConfig,
-      devServer,
-    }
+        ...appConfig,
+        devServer,
+      }
     : appConfig;
 };
 
