@@ -24,6 +24,7 @@
     "postcss",
     "!json",
     "!jsonc",
+    "!yaml",
   ],
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
