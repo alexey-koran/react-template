@@ -3,7 +3,6 @@
     "mikestead.dotenv",
     "formulahendry.auto-rename-tag",
     "clinyong.vscode-css-modules",
-    "heybourn.headwind",
     "cpylua.language-postcss",
     "SonarSource.sonarlint-vscode",
     "dannyconnell.split-html-attributes",
