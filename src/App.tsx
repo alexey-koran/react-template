@@ -1,1 +1,3 @@
-export const App = (): JSX.Element => <div className='test'>Test</div>;
+import styles from './App.module.pcss';
+
+export const App = (): JSX.Element => <div className={styles.test}>Test</div>;
