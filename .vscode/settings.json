@@ -1,11 +1,16 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
   "eslint.workingDirectories": [
     {
       "mode": "auto",
     }
   ],
+  "cSpell.language": "en,ru",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "splitHTMLAttributes.closingBracketOnNewLine": true,
   "headwind.classRegex": {
     "html": "\\bclass\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\']",
     "css": "\\B@apply\\s+([_a-zA-Z0-9\\s\\-\\:\\/]+);",
