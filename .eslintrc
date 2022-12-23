@@ -157,7 +157,7 @@
       "single"
     ],
     "dot-notation":"off",
-    "no-console": "warn",
+    "no-console": "error",
     "no-alert": "error",
     "no-var": "error",
     "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
