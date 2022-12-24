@@ -6,6 +6,9 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[css][postcss][scss][less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
   "editor.formatOnSave": true,
   "editor.quickSuggestions": {
     "strings": "on"
