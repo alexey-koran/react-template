@@ -40,13 +40,16 @@ specifiers:
   postcss-loader: ^7.0.2
   postcss-preset-env: ^7.8.3
   prettier: ^2.8.1
+  prettier-plugin-tailwindcss: ^0.2.1
   react: ^18.2.0
   react-dom: ^18.2.0
   style-loader: ^3.3.1
   stylelint: ^14.16.0
   stylelint-config-clean-order: ^2.2.0
+  stylelint-config-prettier: ^9.0.4
   stylelint-config-standard: ^29.0.0
   stylelint-order: ^5.0.0
+  stylelint-prettier: ^2.0.0
   svgo: ^3.0.2
   tailwindcss: ^3.2.4
   ts-node: ^10.9.1
@@ -100,11 +103,14 @@ devDependencies:
   postcss-loader: 7.0.2_qxxfhhrl3yknjjmta266mo3u64
   postcss-preset-env: 7.8.3_postcss@8.4.20
   prettier: 2.8.1
+  prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.1
   style-loader: 3.3.1_webpack@5.75.0
   stylelint: 14.16.0
   stylelint-config-clean-order: 2.2.0_stylelint@14.16.0
+  stylelint-config-prettier: 9.0.4_stylelint@14.16.0
   stylelint-config-standard: 29.0.0_stylelint@14.16.0
   stylelint-order: 5.0.0_stylelint@14.16.0
+  stylelint-prettier: 2.0.0_lzrral356zwd7lm6e3scl4w4om
   svgo: 3.0.2
   tailwindcss: 3.2.4_ra2vnoek4vhbzktaezawwqbin4
   ts-node: 10.9.1_moeqx3xmzxqxagf2sz6mqkbb7m
@@ -6513,6 +6519,15 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
+  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.1:
+    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.8.1
+    dev: true
+
   /prettier/2.8.1:
     resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
     engines: {node: '>=10.13.0'}
@@ -7276,6 +7291,16 @@ packages:
       stylelint-order: 5.0.0_stylelint@14.16.0
     dev: true
 
+  /stylelint-config-prettier/9.0.4_stylelint@14.16.0:
+    resolution: {integrity: sha512-38nIGTGpFOiK5LjJ8Ma1yUgpKENxoKSOhbDNSemY7Ep0VsJoXIW9Iq/2hSt699oB9tReynfWicTAoIHiq8Rvbg==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    peerDependencies:
+      stylelint: '>=11.0.0'
+    dependencies:
+      stylelint: 14.16.0
+    dev: true
+
   /stylelint-config-recommended/9.0.0_stylelint@14.16.0:
     resolution: {integrity: sha512-9YQSrJq4NvvRuTbzDsWX3rrFOzOlYBmZP+o513BJN/yfEmGSr0AxdvrWs0P/ilSpVV/wisamAHu5XSk8Rcf4CQ==}
     peerDependencies:
@@ -7300,6 +7325,18 @@ packages:
     dependencies:
       postcss: 8.4.20
       postcss-sorting: 7.0.1_postcss@8.4.20
+      stylelint: 14.16.0
+    dev: true
+
+  /stylelint-prettier/2.0.0_lzrral356zwd7lm6e3scl4w4om:
+    resolution: {integrity: sha512-jvT3G+9lopkeB0ARmDPszyfaOnvnIF+30QCjZxyt7E6fynI1T9mOKgYDNb9bXX17M7PXMZaX3j/26wqakjp1tw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      prettier: '>=2.0.0'
+      stylelint: '>=14.0.0'
+    dependencies:
+      prettier: 2.8.1
+      prettier-linter-helpers: 1.0.0
       stylelint: 14.16.0
     dev: true
 

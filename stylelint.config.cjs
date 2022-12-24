@@ -1,7 +1,12 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-clean-order'],
-  plugins: ['stylelint-order'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-clean-order',
+    'stylelint-config-prettier',
+  ],
+  plugins: ['stylelint-order', 'stylelint-prettier'],
   rules: {
+    'prettier/prettier': true,
     'at-rule-no-unknown': [
       true,
       {
@@ -53,8 +58,6 @@ module.exports = {
         message: selector => `Expected class selector "${selector}" to be lowerCamelCase`,
       },
     ],
-    'selector-list-comma-newline-after': 'never-multi-line',
-    'selector-list-comma-newline-before': 'never-multi-line',
     'selector-type-no-unknown': true,
     'selector-pseudo-class-no-unknown': true,
     'selector-pseudo-element-no-unknown': true,
