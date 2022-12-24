@@ -9,6 +9,11 @@
 *.ico
 *.xml
 *.html
+*.otf
+*.ttf
+*.woff
+*.woff2
+*.eot
 *.md
 *.webmanifest
 /node_modules
