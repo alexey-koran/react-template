@@ -18,3 +18,4 @@
 *.md
 *.webmanifest
 /node_modules
+/build
