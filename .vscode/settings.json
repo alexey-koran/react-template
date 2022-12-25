@@ -1,19 +1,48 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css][postcss][scss][less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "eslint.alwaysShowStatus": true,
   "eslint.workingDirectories": [
     {
       "mode": "auto",
     }
   ],
+  "cSpell.language": "en,ru",
+  "cSpell.enableFiletypes": [
+    "ts",
+    "js",
+    "tsx",
+    "jsx",
+    "html",
+    "css",
+    "postcss",
+    "!json",
+    "!jsonc",
+    "!yaml",
+  ],
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
-  "headwind.classRegex": {
-    "html": "\\bclass\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\']",
-    "css": "\\B@apply\\s+([_a-zA-Z0-9\\s\\-\\:\\/]+);",
-    "postcss": "\\B@apply\\s+([_a-zA-Z0-9\\s\\-\\:\\/]+);",
-    "module.postcss": "\\B@apply\\s+([_a-zA-Z0-9\\s\\-\\:\\/]+);",
-    "javascript": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)",
-    "javascriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)",
-    "typescript": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)",
-    "typescriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)"
-  }
+  "splitHTMLAttributes.closingBracketOnNewLine": true,
+  "stylelint.packageManager": "pnpm",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
 }

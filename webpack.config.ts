@@ -20,7 +20,7 @@ type Env = Record<string, boolean> | undefined;
 type Options = Pick<WebpackOptionsNormalized, 'mode'> & AdditionalOptions;
 type Configuration = WebpackConfiguration & WebpackDevServerConfiguration;
 
-const config = (env: Env, options: Options): Configuration => {
+const config = (_env: Env, options: Options): Configuration => {
   const isProduction = options.mode === 'production';
   const isDevelopment = options.mode === 'development';
   const isDevServer = isDevelopment && options?.hot;
@@ -156,9 +156,9 @@ const config = (env: Env, options: Options): Configuration => {
 
   return isDevServer
     ? {
-      ...appConfig,
-      devServer,
-    }
+        ...appConfig,
+        devServer,
+      }
     : appConfig;
 };
 

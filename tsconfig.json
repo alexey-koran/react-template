@@ -1,6 +1,19 @@
 {
+  "include": [
+    ".eslintrc.cjs",
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.js",
+    "./**/*.cjs",
+    "./**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     "baseUrl": "src",
+    "outDir": "./build/",
+    "rootDir": "./",
     "typeRoots": [
       "./node_modules/@types",
       "./src/types"
@@ -10,24 +23,27 @@
         "./*"
       ]
     },
-    "outDir": "./build/",
-    "rootDir": "./",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ES6",
     "jsx": "react-jsx",
     "isolatedModules": true,
     "allowJs": true,
-    "allowUnreachableCode": true,
+    "allowUnreachableCode": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "error",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "removeComments": true,
     "resolveJsonModule": true,
     "sourceMap": true,
+    "skipLibCheck": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true
   }
