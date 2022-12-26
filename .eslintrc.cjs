@@ -108,6 +108,7 @@ const baseRules = {
   'react/react-in-jsx-scope': 'off',
   'react-hooks/rules-of-hooks': 'error',
   'react-hooks/exhaustive-deps': 'warn',
+  'react/jsx-no-useless-fragment': [2, { allowExpressions: true }],
   'react/jsx-filename-extension': [
     1,
     {
