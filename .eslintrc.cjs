@@ -230,7 +230,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['./**/*.tsx', './**/*.ts'],
+      files: ['./**/*.ts', './**/*.tsx'],
       extends: [...typescriptConfigs, 'prettier'],
       plugins: [...typescriptPlugins, ...basePlugins, 'prettier'],
       rules: {
