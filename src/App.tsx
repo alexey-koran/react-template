@@ -1,3 +1,12 @@
+import { ErrorBoundary } from 'react-error-boundary';
+
 import styles from './App.module.pcss';
 
-export const App = (): JSX.Element => <div className={styles.test}>Test</div>;
+import { ErrorFallbackExample } from '@/ErrorFallbackExample';
+
+export const App = (): JSX.Element => (
+  // This is just an example, replace ErrorFallbackExample by your implementation!
+  <ErrorBoundary FallbackComponent={ErrorFallbackExample}>
+    <div className={styles.test}>Test</div>
+  </ErrorBoundary>
+);
