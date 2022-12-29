@@ -110,12 +110,26 @@ const config = (_env: Env, options: Options): Configuration => {
           ],
         },
         {
-          test: /\.svg$/,
-          issuer: /\.tsx?$/,
-          use: [{ loader: '@svgr/webpack' }],
+          test: /\.svg$/i,
+          type: 'asset/resource',
+          resourceQuery: /url/,
           generator: {
             filename: 'svg/[hash][ext][query]',
           },
+        },
+        {
+          test: /\.svg$/,
+          issuer: /\.tsx?$/,
+          resourceQuery: { not: [/url/] },
+          use: [
+            {
+              loader: '@svgr/webpack',
+              options: {
+                svgoConfig: './svgo.config.cjs',
+                prettierConfig: './.prettierrc',
+              },
+            },
+          ],
         },
       ],
     },
