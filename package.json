@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@svgr/core": "^6.5.1",
     "@svgr/webpack": "^6.5.1",
     "@types/dotenv-webpack": "^7.0.3",
     "@types/html-webpack-plugin": "^3.2.6",
