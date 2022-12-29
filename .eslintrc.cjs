@@ -1,5 +1,6 @@
 const baseRules = {
   'prettier/prettier': 'error',
+  'import/no-duplicates': ['error', { considerQueryString: true }],
   'import/prefer-default-export': 'off',
   'import/no-extraneous-dependencies': [
     'error',
@@ -76,6 +77,12 @@ const baseRules = {
   'no-console': 'error',
   'no-alert': 'error',
   'no-var': 'error',
+  'no-duplicate-imports': [
+    'error',
+    {
+      includeExports: true,
+    },
+  ],
   'no-multiple-empty-lines': [
     2,
     {
@@ -108,7 +115,12 @@ const baseRules = {
   'react/react-in-jsx-scope': 'off',
   'react-hooks/rules-of-hooks': 'error',
   'react-hooks/exhaustive-deps': 'warn',
-  'react/jsx-no-useless-fragment': [2, { allowExpressions: true }],
+  'react/jsx-no-useless-fragment': [
+    2,
+    {
+      allowExpressions: true,
+    },
+  ],
   'react/jsx-filename-extension': [
     1,
     {
@@ -130,6 +142,7 @@ const baseRules = {
 };
 
 const typescriptRules = {
+  '@typescript-eslint/no-explicit-any': 'error',
   '@typescript-eslint/no-this-alias': 'error',
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
   '@typescript-eslint/no-unused-expressions': ['error'],
@@ -172,13 +185,20 @@ const typescriptRules = {
   '@typescript-eslint/dot-notation': 'off',
 };
 
-const baseConfigs = ['airbnb', 'airbnb/hooks', 'eslint:recommended', 'plugin:react/recommended'];
+const baseConfigs = [
+  'airbnb',
+  'airbnb/hooks',
+  'eslint:recommended',
+  'plugin:import/recommended',
+  'plugin:react/recommended',
+];
 
 const typescriptConfigs = [
   'airbnb',
   'airbnb/hooks',
   'airbnb-typescript',
   'eslint:recommended',
+  'plugin:import/recommended',
   'plugin:react/recommended',
   'plugin:@typescript-eslint/recommended',
   'plugin:@typescript-eslint/recommended-requiring-type-checking',
