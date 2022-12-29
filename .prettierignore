@@ -1,1 +1,5 @@
+# Build
 build
+
+node_modules
+__generated__
