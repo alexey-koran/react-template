@@ -130,7 +130,7 @@ const config = (_env: Env, options: Options): Configuration => {
     plugins: [
       new Dotenv(),
       new HtmlWebpackPlugin({
-        title: 'Webpack react and typescript boilerplate',
+        title: 'React and typescript template',
         template: './src/public/index.html',
       }),
       new MiniCssExtractPlugin({

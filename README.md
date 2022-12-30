@@ -1,4 +1,4 @@
-# webpack-boilerplate
+# React template
 
 As package manager I'm use now [pnpm](https://pnpm.io/)
 

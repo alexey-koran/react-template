@@ -1,16 +1,16 @@
 {
-  "name": "webpack-boilerplate",
-  "version": "1.0.4",
-  "description": "Webpack react and typescript boilerplate",
+  "name": "react-template",
+  "version": "0.0.1",
+  "description": "React and typescript template",
   "main": "src/index.tsx",
   "author": "Alexey-Koran",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexey-koran/webpack-boilerplate/issues"
+    "url": "https://github.com/alexey-koran/react-template/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexey-koran/webpack-boilerplate.git"
+    "url": "git+https://github.com/alexey-koran/react-template.git"
   },
   "scripts": {
     "dev": "webpack serve --color --hot --mode=development",
