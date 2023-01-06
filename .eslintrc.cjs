@@ -13,7 +13,9 @@ const baseRules = {
   'comma-dangle': ['error', 'always-multiline'],
   'eol-last': 'error',
   'id-blacklist': [
+    'Error',
     'error',
+    'Any',
     'any',
     'Number',
     'number',
@@ -22,12 +24,23 @@ const baseRules = {
     'Boolean',
     'boolean',
     'Undefined',
+    'undefined',
   ],
   'id-match': 'error',
   'import/order': [
     'error',
     {
-      groups: ['external', 'builtin', 'index', 'sibling', 'parent', 'object', 'type', 'internal'],
+      groups: [
+        'builtin',
+        'external',
+        'internal',
+        'parent',
+        'sibling',
+        'index',
+        'object',
+        'type',
+        'unknown',
+      ],
       pathGroups: [
         {
           pattern: 'react',
@@ -35,20 +48,37 @@ const baseRules = {
           position: 'before',
         },
         {
-          pattern: '@/**/*.pcss',
-          group: 'index',
+          pattern: 'react**',
+          group: 'builtin',
         },
         {
-          pattern: '@/uikit/**',
-          group: 'sibling',
+          pattern: '@**/react**',
+          group: 'builtin',
         },
         {
-          pattern: '@/**',
+          pattern: 'webpack',
+          group: 'builtin',
+          position: 'after',
+        },
+        {
+          pattern: 'webpack**',
+          group: 'builtin',
+          position: 'after',
+        },
+        {
+          pattern: '@/uikit/**/*',
           group: 'internal',
+          position: 'after',
         },
         {
-          pattern: './**',
-          group: 'parent',
+          pattern: '@/assets/**/*',
+          group: 'internal',
+          position: 'after',
+        },
+        {
+          pattern: './**/*.pcss',
+          group: 'sibling',
+          position: 'after',
         },
       ],
       pathGroupsExcludedImportTypes: ['react'],
