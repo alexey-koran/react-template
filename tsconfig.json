@@ -25,7 +25,7 @@
     },
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ES6",
+    "target": "ESNext",
     "jsx": "react-jsx",
     "isolatedModules": true,
     "allowJs": true,

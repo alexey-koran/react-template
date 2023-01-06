@@ -42,7 +42,7 @@ const config = (_env: Env, options: Options): Configuration => {
       runtimeChunk: 'single',
       minimizer: [
         new ESBuildMinifyPlugin({
-          target: 'es2015',
+          target: 'esnext',
           jsx: 'automatic',
           css: true,
         }),
@@ -72,7 +72,7 @@ const config = (_env: Env, options: Options): Configuration => {
           exclude: /node_modules/,
           options: {
             loader: 'tsx',
-            target: 'es2015',
+            target: 'esnext',
           },
         },
         {
