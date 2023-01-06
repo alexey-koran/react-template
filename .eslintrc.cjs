@@ -14,7 +14,6 @@ const baseRules = {
   'eol-last': 'error',
   'id-blacklist': [
     'Error',
-    'error',
     'Any',
     'any',
     'Number',
