@@ -47,12 +47,14 @@ const baseRules = {
           position: 'before',
         },
         {
-          pattern: 'react**',
-          group: 'builtin',
+          pattern: '**react**',
+          group: 'external',
+          position: 'after',
         },
         {
-          pattern: '@**/react**',
-          group: 'builtin',
+          pattern: '@**/**react**',
+          group: 'external',
+          position: 'after',
         },
         {
           pattern: 'webpack',
@@ -60,8 +62,18 @@ const baseRules = {
           position: 'after',
         },
         {
-          pattern: 'webpack**',
+          pattern: '**webpack**',
           group: 'builtin',
+          position: 'after',
+        },
+        {
+          pattern: '@**/**webpack**',
+          group: 'builtin',
+          position: 'after',
+        },
+        {
+          pattern: '@/components/**/*',
+          group: 'internal',
           position: 'after',
         },
         {
