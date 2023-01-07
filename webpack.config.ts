@@ -1,15 +1,16 @@
-import CopyWebpackPlugin from 'copy-webpack-plugin';
-import Dotenv from 'dotenv-webpack';
-import { ESBuildMinifyPlugin } from 'esbuild-loader';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-
 import { resolve } from 'path';
 
 import type { Configuration as WebpackConfiguration, WebpackOptionsNormalized } from 'webpack';
+
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import Dotenv from 'dotenv-webpack';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import type { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+
+import { ESBuildMinifyPlugin } from 'esbuild-loader';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 interface AdditionalOptions {
   hot?: boolean;
