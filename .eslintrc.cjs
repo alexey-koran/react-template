@@ -250,8 +250,9 @@ const typescriptPlugins = ['@typescript-eslint'];
 
 module.exports = {
   env: {
-    es2021: true,
+    es2022: true,
     node: true,
+    browser: true,
   },
   extends: [...baseConfigs, 'prettier'],
   parser: '@typescript-eslint/parser',
