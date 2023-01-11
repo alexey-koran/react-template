@@ -217,24 +217,71 @@ const reactRules = {
   'react/display-name': 'off',
   'react/jsx-uses-react': 'off',
   'react/react-in-jsx-scope': 'off',
+  'react/require-default-props': 'off',
+  'react/jsx-props-no-spreading': 'off',
+  'react/no-array-index-key': 'error',
   'react-hooks/rules-of-hooks': 'error',
   'react-hooks/exhaustive-deps': 'error',
+  'react/jsx-fragments': ['error', 'syntax'],
+  'react/jsx-boolean-value': ['error', 'always'],
+  'react/jsx-sort-props': [
+    'error',
+    {
+      callbacksLast: true,
+      shorthandFirst: false,
+      shorthandLast: true,
+      ignoreCase: true,
+      noSortAlphabetically: true,
+      multiline: 'last',
+      reservedFirst: false,
+    },
+  ],
+  'react/no-multi-comp': [
+    'error',
+    {
+      ignoreStateless: true,
+    },
+  ],
+  'react/destructuring-assignment': [
+    'error',
+    'always',
+    {
+      ignoreClassFields: true,
+      destructureInSignature: 'always',
+    },
+  ],
+  'react/jsx-no-leaked-render': [
+    'error',
+    {
+      validStrategies: ['coerce', 'ternary'],
+    },
+  ],
+  'react/hook-use-state': 'error', // TODO: add allowDestructuredState after eslint release
+  'react/no-unstable-nested-components': [
+    'error',
+    {
+      allowAsProps: false,
+    },
+  ],
   'react/jsx-no-useless-fragment': [
-    2,
+    'error',
     {
       allowExpressions: true,
     },
   ],
   'react/jsx-filename-extension': [
-    1,
+    'error',
     {
-      extensions: ['.ts', '.tsx'],
+      extensions: ['.jsx', '.mjsx', '.tsx', '.mtsx'],
+      allow: 'as-needed',
     },
   ],
-  'react/jsx-fragments': ['error', 'syntax'],
-  'react/jsx-props-no-spreading': 'off',
-  'react/function-component-definition': 'off',
-  'react/require-default-props': 'off',
+  'react/function-component-definition': [
+    'error',
+    {
+      namedComponents: 'arrow-function',
+    },
+  ],
 };
 
 module.exports = [
