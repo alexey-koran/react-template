@@ -45,4 +45,5 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
+  "eslint.experimental.useFlatConfig": true,
 }

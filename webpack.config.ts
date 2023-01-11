@@ -136,7 +136,21 @@ const config = (_env: Env, options: Options): Configuration => {
     },
 
     resolve: {
-      extensions: ['.wasm', '.js', '.json', '.mjs', '.cjs', '.jsx', '.d.ts', '.ts', '.tsx'],
+      extensions: [
+        '.wasm',
+        '.json',
+        '.js',
+        '.mjs',
+        '.cjs',
+        '.jsx',
+        '.mjsx',
+        '.ts',
+        '.mts',
+        '.cts',
+        '.tsx',
+        '.mtsx',
+        '.d.ts',
+      ],
       alias: {
         '@': resolve(__dirname, 'src'),
       },

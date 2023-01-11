@@ -1,7 +1,13 @@
-*.tsx
-*.jsx
-*.ts
 *.js
+*.cjs
+*.mjs
+*.jsx
+*.mjsx
+*.ts
+*.cts
+*.mts
+*.tsx
+*.mtsx
 *.svg
 *.png
 *.jpg

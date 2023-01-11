@@ -113,8 +113,11 @@
 *.inc             text
 *.ini             text
 *.js              text
+*.cjs             text
+*.mjs             text
 *.json            text
 *.jsx             text
+*.mjsx            text
 *.less            text
 *.ls              text
 *.map             text -diff
@@ -134,7 +137,10 @@
 *.styl            text
 *.tag             text
 *.ts              text
+*.cts             text
+*.mts             text
 *.tsx             text
+*.mtsx            text
 *.xml             text
 *.xhtml           text diff=html
 
