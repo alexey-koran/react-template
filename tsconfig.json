@@ -27,6 +27,7 @@
         "./*"
       ]
     },
+    "strict": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ESNext",
@@ -39,16 +40,13 @@
     "importsNotUsedAsValues": "error",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
     "resolveJsonModule": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true
   }
 }
