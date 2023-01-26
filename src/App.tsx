@@ -10,7 +10,5 @@ export const App: FC = () => (
   // This is just an example, replace ErrorFallbackExample by your implementation!
   <ErrorBoundary FallbackComponent={ErrorFallbackExample}>
     <div className={styles['test']}>Test</div>
-
-    <button type='button'></button>
   </ErrorBoundary>
 );
