@@ -1,7 +1,13 @@
-*.tsx
-*.jsx
-*.ts
 *.js
+*.cjs
+*.mjs
+*.jsx
+*.mjsx
+*.ts
+*.cts
+*.mts
+*.tsx
+*.mtsx
 *.svg
 *.png
 *.jpg
@@ -17,5 +23,5 @@
 *.eot
 *.md
 *.webmanifest
-/node_modules
-/build
+node_modules
+build

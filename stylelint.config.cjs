@@ -55,7 +55,7 @@ module.exports = {
     'selector-class-pattern': [
       '^[a-z][a-zA-Z0-9]+$',
       {
-        message: selector => `Expected class selector "${selector}" to be lowerCamelCase`,
+        message: (selector) => `Expected class selector "${selector}" to be lowerCamelCase`,
       },
     ],
     'selector-type-no-unknown': true,
