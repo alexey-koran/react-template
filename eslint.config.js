@@ -1,99 +1,321 @@
+const reactPlugin = require('eslint-plugin-react');
+const reactHooks = require('eslint-plugin-react-hooks');
+
+const reactConfig = require('eslint-plugin-react/configs/recommended');
+
 const typescript = require('@typescript-eslint/eslint-plugin');
 const typescriptParser = require('@typescript-eslint/parser');
 const prettierConfig = require('eslint-config-prettier');
 const pluginImport = require('eslint-plugin-import');
+const pluginImportConfig = require('eslint-plugin-import/config/recommended');
 const reactAccessibility = require('eslint-plugin-jsx-a11y');
 const prettierPlugin = require('eslint-plugin-prettier');
 const globals = require('globals');
 
-const react = require('eslint-plugin-react');
-const reactHooks = require('eslint-plugin-react-hooks');
-
 const allJsExtensions = 'js,mjs,cjs,jsx,mjsx';
 const allTsExtensions = 'ts,mts,cts,tsx,mtsx';
+const allExtensions = [
+  '.js',
+  '.mjs',
+  '.cjs',
+  '.jsx',
+  '.mjsx',
+  '.ts',
+  '.mts',
+  '.cts',
+  '.tsx',
+  '.mtsx',
+];
+
 const supportedTsFileTypes = `**/*.{${allTsExtensions}}`;
 const supportedFileTypes = `**/*.{${allJsExtensions},${allTsExtensions}}`;
 
-const baseRules = {
-  'prettier/prettier': 'error',
-  'arrow-parens': ['error', 'as-needed'],
-  camelcase: 'error',
-  'comma-dangle': ['error', 'always-multiline'],
-  'eol-last': 'error',
-  'id-denylist': 'error',
-  'id-match': 'error',
-  'max-len': [
-    'error',
+const getTsNamingConventionRule = ({ isTsx }) => ({
+  '@typescript-eslint/naming-convention': [
+    2,
     {
-      code: 100,
-      ignorePattern: '\\s*<',
-      ignoreComments: true,
-      ignoreRegExpLiterals: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-      ignoreTrailingComments: true,
-      ignoreUrls: true,
+      selector: 'default',
+      format: ['strictCamelCase', ...(isTsx ? ['StrictPascalCase'] : [])],
+      leadingUnderscore: 'forbid',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      selector: 'variable',
+      format: ['strictCamelCase', 'UPPER_CASE'],
+      modifiers: ['const'],
+      types: ['boolean', 'string', 'number'],
+      leadingUnderscore: 'forbid',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      selector: 'variable',
+      types: ['boolean'],
+      format: ['PascalCase'],
+      prefix: ['is', 'has', 'should', 'can'],
+      leadingUnderscore: 'forbid',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      selector: 'variable',
+      modifiers: ['destructured'],
+      format: null,
+    },
+    {
+      selector: 'objectLiteralProperty',
+      format: null,
+      leadingUnderscore: 'forbid',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      selector: 'parameter',
+      format: ['strictCamelCase'],
+      leadingUnderscore: 'allow',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      selector: 'typeLike',
+      format: ['PascalCase'],
+      leadingUnderscore: 'forbid',
+      trailingUnderscore: 'forbid',
     },
   ],
-  'jsx-quotes': ['error', 'prefer-single'],
-  'dot-notation': 'off',
-  'no-console': 'error',
-  'no-alert': 'error',
-  'no-var': 'error',
+});
+
+/*
+  https://eslint.org/docs/latest/use/configure/rules
+  "off" or 0 - turn the rule off
+  "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
+  "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+*/
+
+/*
+  I forbid you to code :)
+*/
+
+const messages = {
+  NO_ACCESS_MODIFIER: 'There is no need to limit developer access to properties.',
+};
+
+const baseRules = {
+  'no-await-in-loop': 0,
+
+  // eslint rules that not disabled by default via any config
+  // use typescript-eslint version
+  'no-shadow': 0,
+  'no-return-await': 0, // @typescript-eslint/return-await
+  'no-use-before-define': 0,
+  'no-unused-expressions': 0,
+  'padding-line-between-statements': 0,
+
+  'prettier/prettier': 2, // eslint-plugin-prettier
+
+  radix: 2,
+  curly: 2,
+  eqeqeq: 2,
+  'default-case': 2,
+  'default-case-last': 2,
+  'object-shorthand': 2,
+  'require-atomic-updates': 2,
+
+  complexity: [2, 13],
+  'max-depth': [2, 4],
+  'max-statements': [2, 8],
+  'max-nested-callbacks': [2, 5],
+  'max-lines-per-function': [
+    2,
+    {
+      max: 100,
+      skipBlankLines: true,
+      skipComments: true,
+    },
+  ],
+
+  'id-match': 2,
+  'id-denylist': 2,
+
+  'no-void': ['error', { allowAsStatement: true }],
+  'no-eval': 2,
+  'no-alert': 2,
+  'no-proto': 2,
+  'no-labels': 2,
+  'no-plusplus': 2,
+  'no-lonely-if': 2,
+  'no-multi-str': 2,
+  'no-extra-bind': 2,
+  'no-new-object': 2,
+  'no-lone-blocks': 2,
+  'no-self-compare': 2,
+  'no-useless-call': 2,
+  'no-multi-assign': 2,
+  'no-new-wrappers': 2,
+  'no-octal-escape': 2,
+  'no-extend-native': 2,
+  'no-nested-ternary': 2,
+  'no-param-reassign': 2,
+  'no-unreachable-loop': 2,
+  'no-negated-condition': 2,
+  'no-implicit-coercion': 2,
+  'no-constructor-return': 2,
+  'newline-per-chained-call': 2,
+  'no-promise-executor-return': 2,
+  'no-new-native-nonconstructor': 2,
+  'no-unmodified-loop-condition': 2,
+  'no-constant-binary-expression': 2,
+
+  'prefer-template': 2,
+  'prefer-object-spread': 2,
+  'prefer-object-has-own': 2,
+  'prefer-numeric-literals': 2,
+  'prefer-exponentiation-operator': 2,
+
+  'no-return-assign': [2, 'always'],
+
+  'no-console': [
+    2,
+    {
+      allow: ['warn', 'error', 'debug'],
+    },
+  ],
+  'no-sequences': [
+    2,
+    {
+      allowInParentheses: false,
+    },
+  ],
+  'no-else-return': [
+    2,
+    {
+      allowElseIf: false,
+    },
+  ],
+  'no-unneeded-ternary': [
+    2,
+    {
+      defaultAssignment: false,
+    },
+  ],
   'no-duplicate-imports': [
-    'error',
+    2,
     {
       includeExports: true,
     },
   ],
-  'no-multiple-empty-lines': [
+  'no-restricted-syntax': [
     2,
     {
-      max: 1,
-      maxEOF: 0,
-      maxBOF: 0,
+      selector: 'ForInStatement',
+      message:
+        'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys, values, entries}, and iterate over the resulting array.',
     },
-  ],
-  'no-await-in-loop': 'off',
-  'no-trailing-spaces': [
-    'error',
     {
-      ignoreComments: true,
+      selector: "Identifier[name='Reflect']",
+      message:
+        'Avoid the Reflect API. It is a very low-level feature that has only rare and specific use-cases if building complex and hacky libraries. There is no need to use this feature for any kind of normal development',
+    },
+    {
+      selector: "BinaryExpression[operator='in']",
+      message: 'Prefer Object.hasOwn().',
+    },
+    {
+      selector: "PropertyDefinition[accessibility='public']",
+      message: messages.NO_ACCESS_MODIFIER,
+    },
+    {
+      selector: "PropertyDefinition[accessibility='protected']",
+      message: messages.NO_ACCESS_MODIFIER,
+    },
+    {
+      selector: "PropertyDefinition[accessibility='private']",
+      message: messages.NO_ACCESS_MODIFIER,
+    },
+    {
+      selector: "Identifier[name='PropTypes']",
+      message: 'No PropTypes. Use Typescript instead.',
+    },
+    {
+      selector: "Identifier[name='propTypes']",
+      message: 'No PropTypes. Use Typescript instead.',
+    },
+    {
+      selector: "Identifier[name='createContext']",
+      message:
+        'No React Context. Use component composition instead (https://beta.reactjs.org/learn/passing-data-deeply-with-context#before-you-use-context), or a "Global State Management" solution.',
     },
   ],
-  'no-return-await': 'error',
-  'object-curly-spacing': [2, 'always'],
-  'prefer-const': 'error',
+
   'prefer-destructuring': [
-    'error',
+    2,
     {
       array: false,
       object: true,
     },
+    {
+      enforceForRenamedProperties: false,
+    },
   ],
-  radix: 'error',
-  'space-before-function-paren': ['error', 'always'],
+
+  'func-style': [
+    2,
+    'expression',
+    {
+      allowArrowFunctions: true,
+    },
+  ],
   'spaced-comment': [
-    'error',
+    2,
     'always',
     {
-      markers: ['/'],
+      line: {
+        markers: ['/'],
+        exceptions: ['-', '+', '*'],
+      },
+      block: {
+        balanced: true,
+      },
+    },
+  ],
+  'array-callback-return': [
+    2,
+    {
+      allowImplicit: true,
+      checkForEach: true,
     },
   ],
 };
 
 const importRules = {
-  'import/no-unresolved': 'error', // eslint-import-resolver-typescript
-  'import/no-duplicates': ['error', { considerQueryString: true }],
-  'import/prefer-default-export': 'off',
+  'import/named': 0,
+  'import/default': 0,
+  'import/namespace': 0,
+  'import/prefer-default-export': 0,
+  'import/no-named-as-default-member': 0,
+
+  'import/no-cycle': 2,
+  'import/no-namespace': 2,
+  'import/no-unresolved': 2, // eslint-import-resolver-typescript
+  'import/no-empty-named-blocks': 2,
+
+  'import/no-useless-path-segments': [
+    2,
+    {
+      noUselessIndex: true,
+    },
+  ],
+  'import/no-duplicates': [
+    2,
+    {
+      'prefer-inline': true,
+      considerQueryString: true,
+    },
+  ],
   'import/no-extraneous-dependencies': [
-    'error',
+    2,
     {
       devDependencies: true,
     },
   ],
   'import/order': [
-    'error',
+    2,
     {
       groups: [
         'builtin',
@@ -111,6 +333,16 @@ const importRules = {
           pattern: 'react',
           group: 'builtin',
           position: 'before',
+        },
+        {
+          pattern: '**eslint-plugin-react**',
+          group: 'builtin',
+          position: 'after',
+        },
+        {
+          pattern: '**eslint-plugin-react**/**/*',
+          group: 'builtin',
+          position: 'after',
         },
         {
           pattern: '**react**',
@@ -158,10 +390,12 @@ const importRules = {
           position: 'after',
         },
       ],
+      distinctGroup: true,
       pathGroupsExcludedImportTypes: ['react'],
       'newlines-between': 'always',
       alphabetize: {
         order: 'asc',
+        orderImportKind: 'asc',
         caseInsensitive: false,
       },
     },
@@ -169,81 +403,210 @@ const importRules = {
 };
 
 const typescriptRules = {
-  '@typescript-eslint/no-explicit-any': 'error',
-  '@typescript-eslint/no-this-alias': 'error',
-  '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-  '@typescript-eslint/no-unused-expressions': ['error'],
-  '@typescript-eslint/no-unused-vars': 'error',
-  '@typescript-eslint/no-non-null-assertion': 'off',
-  '@typescript-eslint/consistent-type-imports': [
+  // typescript-eslint/recommended rules
+  '@typescript-eslint/no-explicit-any': 2, // default warn
+  '@typescript-eslint/triple-slash-reference': [
     'error',
+    {
+      lib: 'never',
+      path: 'never',
+      types: 'never',
+    },
+  ],
+
+  // typescript-eslint/strict rules, default warn
+  '@typescript-eslint/prefer-includes': 2,
+  '@typescript-eslint/no-throw-literal': 2,
+  '@typescript-eslint/no-base-to-string': 2,
+  '@typescript-eslint/no-dynamic-delete': 2,
+  '@typescript-eslint/unified-signatures': 2,
+  '@typescript-eslint/ban-tslint-comment': 2,
+  '@typescript-eslint/no-extraneous-class': 2,
+  '@typescript-eslint/no-invalid-void-type': 2,
+  '@typescript-eslint/prefer-function-type': 2,
+  '@typescript-eslint/prefer-optional-chain': 2,
+  '@typescript-eslint/prefer-ts-expect-error': 2,
+  '@typescript-eslint/no-unnecessary-condition': 2,
+  '@typescript-eslint/consistent-type-definitions': 2,
+  '@typescript-eslint/prefer-reduce-type-parameter': 2,
+  '@typescript-eslint/consistent-indexed-object-style': 2,
+  '@typescript-eslint/consistent-generic-constructors': 2,
+  '@typescript-eslint/no-unnecessary-boolean-literal-compare': 2,
+  '@typescript-eslint/array-type': [
+    2,
+    {
+      default: 'array-simple',
+    },
+  ],
+  '@typescript-eslint/consistent-type-assertions': [
+    2,
+    {
+      assertionStyle: 'as',
+      objectLiteralTypeAssertions: 'never',
+    },
+  ],
+  '@typescript-eslint/prefer-nullish-coalescing': [
+    2,
+    {
+      ignoreTernaryTests: false,
+      ignoreConditionalTests: false,
+      ignoreMixedLogicalExpressions: false,
+    },
+  ],
+
+  // typescript-eslint/recommended-requiring-type-checking rules
+  '@typescript-eslint/restrict-plus-operands': [
+    2,
+    {
+      checkCompoundAssignments: true,
+    },
+  ],
+
+  // rules not included in any configs
+  '@typescript-eslint/no-redeclare': 2, // eslint version of rule disabled by eslint:recommended
+  '@typescript-eslint/method-signature-style': 2,
+  '@typescript-eslint/promise-function-async': 2,
+  '@typescript-eslint/switch-exhaustiveness-check': 2,
+  '@typescript-eslint/no-confusing-void-expression': 2,
+  '@typescript-eslint/no-redundant-type-constituents': 2,
+  '@typescript-eslint/explicit-module-boundary-types': 2,
+  '@typescript-eslint/consistent-type-imports': [
+    2,
     {
       prefer: 'type-imports',
       fixStyle: 'separate-type-imports',
     },
   ],
   '@typescript-eslint/consistent-type-exports': [
-    'error',
+    2,
     {
       fixMixedExportsWithInlineTypeSpecifier: true,
     },
   ],
-  '@typescript-eslint/quotes': [
-    'error',
-    'single',
+  '@typescript-eslint/strict-boolean-expressions': [
+    2,
     {
-      avoidEscape: true,
+      allowString: false,
+      allowNumber: false,
+      allowNullableObject: false,
     },
   ],
-  '@typescript-eslint/semi': ['error', 'always'],
-  '@typescript-eslint/member-delimiter-style': [
-    'error',
+  '@typescript-eslint/require-array-sort-compare': [
+    2,
     {
-      multiline: {
-        delimiter: 'semi',
-        requireLast: true,
-      },
-      singleline: {
-        delimiter: 'semi',
-        requireLast: false,
-      },
+      ignoreStringArrays: true,
     },
   ],
-  '@typescript-eslint/dot-notation': 'off',
+  '@typescript-eslint/explicit-function-return-type': [
+    2,
+    {
+      allowExpressions: true,
+    },
+  ],
+
+  // typescript-eslint version of eslint rules
+  // rules not included in any configs
+  '@typescript-eslint/no-shadow': [
+    2,
+    {
+      hoist: 'all',
+      allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
+      ignoreTypeValueShadow: true,
+      ignoreFunctionTypeParameterNameValueShadow: true,
+    },
+  ],
+  '@typescript-eslint/return-await': [2, 'in-try-catch'], // eslint/no-return-await
+  '@typescript-eslint/no-use-before-define': [
+    2,
+    {
+      ignoreTypeReferences: true,
+    },
+  ],
+  '@typescript-eslint/no-unused-expressions': [
+    2,
+    {
+      allowShortCircuit: true,
+      allowTernary: true,
+      allowTaggedTemplates: true,
+      enforceForJSX: true,
+    },
+  ],
+  '@typescript-eslint/padding-line-between-statements': [
+    2,
+    {
+      blankLine: 'always',
+      prev: [
+        'const',
+        'let',
+        'case',
+        'default',
+        'block',
+        'block-like',
+        'multiline-block-like',
+        'interface',
+        'type',
+      ],
+      next: '*',
+    },
+    {
+      blankLine: 'any',
+      prev: ['const', 'let'],
+      next: ['const', 'let'],
+    },
+    {
+      blankLine: 'always',
+      prev: '*',
+      next: ['switch', 'while', 'try', 'return', 'if', 'interface', 'type'],
+    },
+  ],
 };
 
 const reactRules = {
-  'react/prop-types': 'off',
-  'react/display-name': 'off',
-  'react/jsx-uses-react': 'off',
-  'react/react-in-jsx-scope': 'off',
-  'react/require-default-props': 'off',
-  'react/jsx-props-no-spreading': 'off',
-  'react/no-array-index-key': 'error',
-  'react-hooks/rules-of-hooks': 'error',
-  'react-hooks/exhaustive-deps': 'error',
-  'react/jsx-fragments': ['error', 'syntax'],
-  'react/jsx-boolean-value': ['error', 'always'],
+  'react/prop-types': 0,
+  'react/display-name': 0,
+  'react/jsx-uses-react': 0,
+  'react/react-in-jsx-scope': 0,
+  'react/require-default-props': 0,
+  'react/jsx-props-no-spreading': 0,
+
+  'react/jsx-fragments': 2,
+  'react/jsx-pascal-case': 2,
+  'react/no-array-index-key': 2,
+  'react-hooks/rules-of-hooks': 2,
+  'react-hooks/exhaustive-deps': 2,
+
+  'react/jsx-boolean-value': [2, 'always'],
+
+  'react/hook-use-state': [
+    2,
+    {
+      allowDestructuredState: true,
+    },
+  ],
   'react/jsx-sort-props': [
-    'error',
+    2,
     {
       callbacksLast: true,
-      shorthandFirst: false,
-      shorthandLast: true,
       ignoreCase: true,
       noSortAlphabetically: true,
       multiline: 'last',
       reservedFirst: false,
     },
   ],
+  'react/jsx-no-duplicate-props': [
+    2,
+    {
+      ignoreCase: true,
+    },
+  ],
   'react/no-multi-comp': [
-    'error',
+    2,
     {
       ignoreStateless: true,
     },
   ],
   'react/destructuring-assignment': [
-    'error',
+    2,
     'always',
     {
       ignoreClassFields: true,
@@ -251,33 +614,32 @@ const reactRules = {
     },
   ],
   'react/jsx-no-leaked-render': [
-    'error',
+    2,
     {
       validStrategies: ['coerce', 'ternary'],
     },
   ],
-  'react/hook-use-state': 'error', // TODO: add allowDestructuredState after eslint release
   'react/no-unstable-nested-components': [
-    'error',
+    2,
     {
       allowAsProps: false,
     },
   ],
   'react/jsx-no-useless-fragment': [
-    'error',
+    2,
     {
       allowExpressions: true,
     },
   ],
   'react/jsx-filename-extension': [
-    'error',
+    2,
     {
       extensions: ['.jsx', '.mjsx', '.tsx', '.mtsx'],
       allow: 'as-needed',
     },
   ],
   'react/function-component-definition': [
-    'error',
+    2,
     {
       namedComponents: 'arrow-function',
     },
@@ -312,6 +674,8 @@ module.exports = [
       reportUnusedDisableDirectives: true,
     },
     settings: {
+      'import/extensions': allExtensions,
+      'import/external-module-folders': ['node_modules'],
       // start eslint-import-resolver-typescript
       'import/parsers': {
         '@typescript-eslint/parser': ['.ts', '.mts', '.cts', '.tsx', '.mtsx'],
@@ -327,6 +691,7 @@ module.exports = [
         },
         node: {
           paths: ['src'],
+          extensions: allExtensions,
         },
       },
       // end eslint-import-resolver-typescript
@@ -335,21 +700,21 @@ module.exports = [
       },
     },
     plugins: {
-      react,
+      react: reactPlugin,
       'react-hooks': reactHooks,
       'jsx-a11y': reactAccessibility,
       import: pluginImport,
       prettier: prettierPlugin,
     },
     rules: {
-      ...baseRules,
-      ...importRules,
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules, // useful for typescript x react@17 https://github.com/jsx-eslint/eslint-plugin-react/blob/8cf47a8ac2242ee00ea36eac4b6ae51956ba4411/index.js#L165-L179
+      ...reactConfig.rules,
       ...reactHooks.configs.recommended.rules,
-      ...reactRules,
       ...reactAccessibility.configs.recommended.rules,
       ...prettierConfig.rules,
+      ...pluginImportConfig.rules,
+      ...baseRules,
+      ...importRules,
+      ...reactRules,
     },
   },
   {
@@ -358,10 +723,21 @@ module.exports = [
       '@typescript-eslint': typescript,
     },
     rules: {
-      ...typescript.configs['eslint-recommended'].rules,
+      ...typescript.configs['eslint-recommended'].overrides[0].rules, // TODO: Keep up on changes
       ...typescript.configs.recommended.rules,
       ...typescript.configs['recommended-requiring-type-checking'].rules,
+      ...typescript.configs.strict.rules,
+      ...getTsNamingConventionRule({ isTsx: false }),
       ...typescriptRules,
+    },
+  },
+  {
+    files: ['**/*.tsx'],
+    plugins: {
+      '@typescript-eslint': typescript,
+    },
+    rules: {
+      ...getTsNamingConventionRule({ isTsx: true }),
     },
   },
 ];
