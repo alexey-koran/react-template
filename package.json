@@ -1,9 +1,9 @@
 {
   "name": "react-template",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "React and typescript template",
   "main": "src/index.tsx",
-  "author": "Alexey-Koran",
+  "author": "Alexey-Koran <alexey.koran@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexey-koran/react-template/issues"
