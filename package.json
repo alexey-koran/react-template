@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/alexey-koran/react-template.git"
   },
+  "homepage": "https://github.com/alexey-koran/react-template#readme",
   "scripts": {
     "dev": "webpack serve --color --hot --mode=development",
     "prod": "webpack serve --color --hot --mode=production",
