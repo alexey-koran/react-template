@@ -42,7 +42,6 @@
     "importsNotUsedAsValues": "error",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
     "noImplicitOverride": true,
