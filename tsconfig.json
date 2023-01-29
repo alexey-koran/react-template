@@ -1,4 +1,5 @@
 {
+  "extends": "@alexey-koran/tsconfig",
   "include": [
     "./**/*.js",
     "./**/*.cjs",
@@ -9,7 +10,7 @@
     "./**/*.cts",
     "./**/*.mts",
     "./**/*.tsx",
-    "./**/*.mtsx",
+    "./**/*.mtsx"
   ],
   "exclude": [
     "node_modules"
@@ -27,30 +28,5 @@
         "./*"
       ]
     },
-    "strict": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ESNext",
-    "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "allowJs": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "importsNotUsedAsValues": "error",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitReturns": true,
-    "noImplicitOverride": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    "suppressImplicitAnyIndexErrors": true
   }
 }
