@@ -49,4 +49,16 @@
   "less.validate": false,
   "scss.validate": false,
   "eslint.experimental.useFlatConfig": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.ts",
+    "*.tsx": "${capture}.module.pcss, ${capture}.ts, index.ts",
+    ".env": "*.env, .env.*, .envrc, env.d.ts",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "webpack.config.*": "*.env, .env.*, .envrc, .postcssrc*, eslint.*, env.d.ts, postcss.config.*, prettier.*, svgo.config.*, stylelint.config.*, tailwind.config.*",
+    "package.json": ".browserslist*, .commitlint*, .editorconfig, .eslint*, .github*, .lintstagedrc*, .npm*, .nvmrc, .pnpm*, .prettier*, .stylelint*, .vscode*, commitlint*, lint-staged*, pnpm*, tsconfig.*",
+    "README*": "AUTHORS, BACKERS*, CHANGELOG*, CITATION*, CODE_OF_CONDUCT*, CODEOWNERS, CONTRIBUTING*, CONTRIBUTORS, COPYING, CREDITS, GOVERNANCE.MD, HISTORY.MD, LICENSE*, MAINTAINERS, SECURITY.MD, SPONSORS*",
+    "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, security.md, sponsors*",
+  }
 }
