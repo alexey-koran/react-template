@@ -22,7 +22,6 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "eslint.alwaysShowStatus": true,
   "eslint.workingDirectories": [
     {
       "mode": "auto",
