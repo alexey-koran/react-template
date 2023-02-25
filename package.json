@@ -1,6 +1,6 @@
 {
   "name": "react-template",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React and typescript template",
   "main": "src/index.tsx",
   "author": "Alexey-Koran <alexey.koran@gmail.com>",
