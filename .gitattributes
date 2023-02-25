@@ -123,6 +123,7 @@
 *.map             text -diff
 *.od              text
 *.onlydata        text
+*.pcss            text diff=css
 *.php             text diff=php
 *.pl              text
 *.ps1             text eol=crlf

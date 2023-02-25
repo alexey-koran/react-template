@@ -119,7 +119,6 @@ const baseRules = {
 
   complexity: [2, 13],
   'max-depth': [2, 4],
-  'max-statements': [2, 8],
   'max-nested-callbacks': [2, 5],
   'max-lines-per-function': [
     2,

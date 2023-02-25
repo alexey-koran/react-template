@@ -2,7 +2,6 @@
   "recommendations": [
     "mikestead.dotenv",
     "formulahendry.auto-rename-tag",
-    "clinyong.vscode-css-modules",
     "cpylua.language-postcss",
     "SonarSource.sonarlint-vscode",
     "dannyconnell.split-html-attributes",
