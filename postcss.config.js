@@ -10,9 +10,5 @@ module.exports = {
     'postcss-assets': {
       loadPaths: ['**'],
     },
-    '@fullhuman/postcss-purgecss': {
-      content: ['./src/**/*.html', './src/**/*.ts', './src/**/*.tsx'],
-      css: ['**/*/.pcss'],
-    },
   },
 };
