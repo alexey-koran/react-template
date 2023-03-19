@@ -38,6 +38,7 @@
   "devDependencies": {
     "@alexey-koran/prettier-config": "^0.0.2",
     "@alexey-koran/tsconfig": "^0.0.2",
+    "@eslint/js": "^8.36.0",
     "@svgr/webpack": "^6.5.1",
     "@types/dotenv-webpack": "^7.0.3",
     "@types/html-webpack-plugin": "^3.2.6",

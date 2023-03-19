@@ -3,6 +3,7 @@ const reactHooks = require('eslint-plugin-react-hooks');
 
 const reactConfig = require('eslint-plugin-react/configs/recommended');
 
+const eslint = require('@eslint/js');
 const typescript = require('@typescript-eslint/eslint-plugin');
 const typescriptParser = require('@typescript-eslint/parser');
 const prettierConfig = require('eslint-config-prettier');
@@ -27,6 +28,7 @@ const allExtensions = [
   '.mtsx',
 ];
 
+const supportedJsFileTypes = `**/*.{${allJsExtensions}}`;
 const supportedTsFileTypes = `**/*.{${allTsExtensions}}`;
 const supportedFileTypes = `**/*.{${allJsExtensions},${allTsExtensions}}`;
 
@@ -646,7 +648,10 @@ const reactRules = {
 };
 
 module.exports = [
-  'eslint:recommended',
+  {
+    files: [supportedJsFileTypes],
+    rules: eslint.configs.recommended.rules,
+  },
   {
     files: [supportedFileTypes],
     languageOptions: {
