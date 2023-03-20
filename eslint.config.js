@@ -414,6 +414,14 @@ const typescriptRules = {
       types: 'never',
     },
   ],
+  '@typescript-eslint/no-misused-promises': [
+    2,
+    {
+      checksVoidReturn: {
+        attributes: false,
+      },
+    },
+  ],
 
   // typescript-eslint/strict rules, default warn
   '@typescript-eslint/prefer-includes': 2,
