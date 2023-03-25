@@ -43,7 +43,7 @@ const getTsNamingConventionRule = ({ isTsx }) => ({
     },
     {
       selector: 'variable',
-      format: ['strictCamelCase', 'UPPER_CASE'],
+      format: ['strictCamelCase', 'UPPER_CASE', ...(isTsx ? ['StrictPascalCase'] : [])],
       modifiers: ['const'],
       types: ['boolean', 'string', 'number'],
       leadingUnderscore: 'forbid',
@@ -412,6 +412,14 @@ const typescriptRules = {
       lib: 'never',
       path: 'never',
       types: 'never',
+    },
+  ],
+  '@typescript-eslint/no-misused-promises': [
+    2,
+    {
+      checksVoidReturn: {
+        attributes: false,
+      },
     },
   ],
 
