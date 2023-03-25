@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@alexey-koran/prettier-config': ^0.0.2
-  '@alexey-koran/tsconfig': ^0.0.2
+  '@alexey-koran/tsconfig': ^0.0.3
   '@eslint/js': ^8.36.0
   '@svgr/webpack': ^6.5.1
   '@types/dotenv-webpack': ^7.0.3
@@ -67,7 +67,7 @@ dependencies:
 
 devDependencies:
   '@alexey-koran/prettier-config': 0.0.2
-  '@alexey-koran/tsconfig': 0.0.2
+  '@alexey-koran/tsconfig': 0.0.3
   '@eslint/js': 8.36.0
   '@svgr/webpack': 6.5.1
   '@types/dotenv-webpack': 7.0.3_webpack-cli@5.0.1
@@ -130,8 +130,8 @@ packages:
     resolution: {integrity: sha512-M69sLkeNYGlrmP954/71e2c1NTQrLVp/yW4HobW51CiB+XpLECDCdMmv2+URFBfFZ83Omd4jRSlCV+goaA4V2Q==}
     dev: true
 
-  /@alexey-koran/tsconfig/0.0.2:
-    resolution: {integrity: sha512-971P1+29TUqWSdVc+6rfC/4tsPqjuiDNQGLTF2MKheGM2mNjGTdQPl1R98zV2Ne8MAc5BNJDLi0mLAf4/fU3sw==}
+  /@alexey-koran/tsconfig/0.0.3:
+    resolution: {integrity: sha512-QBIYh7XyA9YeUesWbsYV4JR99CZq0Fa8uT7aex8smS3aXHCwaNHriHZ2amyZIOinlBnXCe0mXRTuWbPKL9OTKg==}
     dev: true
 
   /@ampproject/remapping/2.2.0:
