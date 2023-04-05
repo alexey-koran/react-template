@@ -122,14 +122,6 @@ const baseRules = {
   complexity: [2, 13],
   'max-depth': [2, 4],
   'max-nested-callbacks': [2, 5],
-  'max-lines-per-function': [
-    2,
-    {
-      max: 100,
-      skipBlankLines: true,
-      skipComments: true,
-    },
-  ],
 
   'id-match': 2,
   'id-denylist': 2,
