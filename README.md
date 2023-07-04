@@ -4,6 +4,6 @@
 
 [![Minimum node version](https://img.shields.io/badge/min%20node-14.18.0-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Minimum npm version](https://img.shields.io/badge/min%20npm-7.0.0-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-[![Recommended node version](https://img.shields.io/badge/rec%20node-18.14.2-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-7.27.1-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
+[![Recommended node version](https://img.shields.io/badge/rec%20node-20.3.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-8.6.6-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 
 **AS A PACKAGE MANAGER, I HIGHLY RECOMMEND USING** [PNPM](https://pnpm.io/)
