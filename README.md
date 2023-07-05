@@ -8,6 +8,138 @@
 
 **AS A PACKAGE MANAGER, I HIGHLY RECOMMEND USING** [PNPM](https://pnpm.io/)
 
+**AS A NODE.JS VERSION MANAGER, I HIGHLY RECOMMEND USING** [NVM](https://github.com/nvm-sh/nvm)
+
+# Installation
+
+```bash
+git clone repo_url
+cd project_location
+pnpm i
+```
+
+# Scripts
+
+**Start developer mode (support hot reload)**
+
+```bash
+pnpm dev
+```
+
+**Start production mode (with some build optimizations)**
+
+```bash
+pnpm prod
+```
+
+**Clean build folder**
+
+```bash
+pnpm clean
+```
+
+**Build application for deploy**
+
+```bash
+pnpm buildapp
+```
+
+**Clean build folder & rebuild application for deploy**
+
+```bash
+pnpm build
+```
+
+**Start webpack plugin for bundle analyze**
+
+```bash
+pnpm analyze
+```
+
+**Husky utility script, starts only once, at the packages installation (not need to be manually called anytime)**
+
+```bash
+pnpm prepare
+```
+
+**Start formatter check on all files**
+
+```bash
+pnpm prettier
+```
+
+**Start formatter autofix on all files**
+
+```bash
+pnpm prettier:fix
+```
+
+**Start eslint check on all files**
+
+```bash
+pnpm lint
+```
+
+**Start eslint autofix on all files**
+
+```bash
+pnpm lint:fix
+```
+
+**Start eslint autofix only on git staged files**
+
+```bash
+pnpm lint:fix-staged
+```
+
+**Start stylelint check on all files**
+
+```bash
+pnpm lint:css
+```
+
+**Start stylelint autofix on all files**
+
+```bash
+pnpm lint:css:fix
+```
+
+**Start stylelint autofix only on git staged files**
+
+```bash
+pnpm lint:css:fix-staged
+```
+
+**Start prettier, eslint & stylelint check processes in order**
+
+```bash
+pnpm lint-all
+```
+
+**Start prettier, eslint & stylelint autofix processes in order**
+
+```bash
+pnpm fix-all
+```
+
+**Start lint-staged fix scripts from .lintstagedrc on git staged files (husky automatically call it on git pre-commit hook)**
+
+```bash
+pnpm fix-staged
+```
+
+**Start svgo on passed svg file (size optimization)**
+
+```bash
+pnpm svgo $FILE_PATH
+```
+
+**Start svgo on all svg files in the project (size optimization)**
+
+```bash
+pnpm svgo-all
+```
+
 # Known issues:
 
 Esbuild-loader update to 3.0.1 is blocked by [esm bug with node v20](https://github.com/TypeStrong/ts-node/issues/1997)
