@@ -7,3 +7,8 @@
 [![Recommended node version](https://img.shields.io/badge/rec%20node-20.3.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-8.6.6-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 
 **AS A PACKAGE MANAGER, I HIGHLY RECOMMEND USING** [PNPM](https://pnpm.io/)
+
+# Known issues:
+
+Esbuild-loader update to 3.0.1 is blocked by [esm bug with node v20](https://github.com/TypeStrong/ts-node/issues/1997)
+
