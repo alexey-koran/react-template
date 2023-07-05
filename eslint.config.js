@@ -122,14 +122,6 @@ const baseRules = {
   complexity: [2, 13],
   'max-depth': [2, 4],
   'max-nested-callbacks': [2, 5],
-  'max-lines-per-function': [
-    2,
-    {
-      max: 100,
-      skipBlankLines: true,
-      skipComments: true,
-    },
-  ],
 
   'id-match': 2,
   'id-denylist': 2,
@@ -751,5 +743,10 @@ module.exports = [
     rules: {
       ...getTsNamingConventionRule({ isTsx: true }),
     },
+  },
+  {
+    // The new config system no longer supports .eslintignore files
+    // https://eslint.org/blog/2022/10/eslint-v8.25.0-released/#highlights
+    ignores: ['./build/*'],
   },
 ];

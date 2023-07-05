@@ -4,10 +4,11 @@ import type { FallbackProps } from 'react-error-boundary';
 
 // This is just an example, replace it by your implementation!
 
-export const ErrorFallbackExample: FC<FallbackProps> = ({
-  error,
-  resetErrorBoundary,
-}): JSX.Element => (
+interface ErrorFallbackProps extends Omit<FallbackProps, 'error'> {
+  error: Error;
+}
+
+export const ErrorFallbackExample: FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => (
   <div role='alert'>
     <p>Something went wrong:</p>
 

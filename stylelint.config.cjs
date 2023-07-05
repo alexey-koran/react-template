@@ -1,9 +1,5 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-clean-order',
-    'stylelint-config-prettier',
-  ],
+  extends: ['stylelint-config-standard', 'stylelint-config-clean-order'],
   plugins: ['stylelint-order', 'stylelint-prettier'],
   rules: {
     'prettier/prettier': true,
@@ -20,12 +16,6 @@ module.exports = {
       },
     ],
     'color-no-invalid-hex': true,
-    'string-quotes': [
-      'single',
-      {
-        avoidEscape: true,
-      },
-    ],
     'value-keyword-case': [
       'lower',
       {
