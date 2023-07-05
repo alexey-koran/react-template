@@ -98,8 +98,8 @@ devDependencies:
     specifier: ^4.6.0
     version: 4.6.0(eslint@8.44.0)
   fork-ts-checker-webpack-plugin:
-    specifier: ^7.3.0
-    version: 7.3.0(typescript@4.9.5)(webpack@5.88.1)
+    specifier: ^8.0.0
+    version: 8.0.0(typescript@4.9.5)(webpack@5.88.1)
   globals:
     specifier: ^13.20.0
     version: 13.20.0
@@ -4692,16 +4692,12 @@ packages:
       is-callable: 1.2.7
     dev: true
 
-  /fork-ts-checker-webpack-plugin@7.3.0(typescript@4.9.5)(webpack@5.88.1):
-    resolution: {integrity: sha512-IN+XTzusCjR5VgntYFgxbxVx3WraPRnKehBFrf00cMSrtUuW9MsG9dhL6MWpY6MkjC3wVwoujfCDgZZCQwbswA==}
+  /fork-ts-checker-webpack-plugin@8.0.0(typescript@4.9.5)(webpack@5.88.1):
+    resolution: {integrity: sha512-mX3qW3idpueT2klaQXBzrIM/pHw+T0B/V9KHEvNrqijTq9NFnMZU6oreVxDYcf33P8a5cW+67PjodNHthGnNVg==}
     engines: {node: '>=12.13.0', yarn: '>=1.0.0'}
     peerDependencies:
       typescript: '>3.6.0'
-      vue-template-compiler: '*'
       webpack: ^5.11.0
-    peerDependenciesMeta:
-      vue-template-compiler:
-        optional: true
     dependencies:
       '@babel/code-frame': 7.22.5
       chalk: 4.1.2
