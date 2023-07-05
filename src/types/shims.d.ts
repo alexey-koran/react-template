@@ -1,5 +1,5 @@
 declare module '*.svg' {
-  import type { FC } from 'react';
+  import type { FC, JSX } from 'react';
 
   const content: FC<JSX.IntrinsicElements['svg']>;
 
