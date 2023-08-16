@@ -1,4 +1,5 @@
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 import type { Configuration as WebpackConfiguration, WebpackOptionsNormalized } from 'webpack';
 
@@ -9,7 +10,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import type { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 
-import { ESBuildMinifyPlugin } from 'esbuild-loader';
+import { EsbuildPlugin } from 'esbuild-loader';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 interface AdditionalOptions {
@@ -23,8 +24,10 @@ type Options = Pick<WebpackOptionsNormalized, 'mode'> & AdditionalOptions;
 
 type Configuration = WebpackConfiguration & WebpackDevServerConfiguration;
 
+const projectDirname = dirname(fileURLToPath(import.meta.url));
+
 const configOutput: Configuration['output'] = {
-  path: resolve(__dirname, 'build'),
+  path: resolve(projectDirname, 'build'),
   filename: 'js/[name].[contenthash].js',
   assetModuleFilename: 'assets/[hash][ext][query]',
 };
@@ -32,8 +35,8 @@ const configOutput: Configuration['output'] = {
 const configOptimization: Configuration['optimization'] = {
   runtimeChunk: 'single',
   minimizer: [
-    new ESBuildMinifyPlugin({
-      target: 'esnext',
+    new EsbuildPlugin({
+      format: 'esm',
       jsx: 'automatic',
       css: true,
     }),
@@ -58,11 +61,10 @@ const configOptimization: Configuration['optimization'] = {
 const configModules = (isProduction: boolean): Required<Configuration>['module'] => ({
   rules: [
     {
-      test: /\.(ts|tsx)$/,
+      test: /\.(js|cjs|mjs|ts|tsx)$/,
       loader: 'esbuild-loader',
       exclude: /node_modules/,
       options: {
-        loader: 'tsx',
         target: 'esnext',
       },
     },
@@ -187,7 +189,7 @@ const config = (_env: Env, { analyze = false, hot = false, mode }: Options): Con
         '.d.ts',
       ],
       alias: {
-        '@': resolve(__dirname, 'src'),
+        '@': resolve(projectDirname, 'src'),
       },
     },
 
@@ -196,7 +198,7 @@ const config = (_env: Env, { analyze = false, hot = false, mode }: Options): Con
 
   const devServer: WebpackDevServerConfiguration = {
     static: {
-      directory: resolve(__dirname, 'src/static'),
+      directory: resolve(projectDirname, 'src/static'),
     },
     historyApiFallback: true,
     compress: true,
