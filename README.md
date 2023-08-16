@@ -139,3 +139,7 @@ pnpm svgo $FILE_PATH
 ```bash
 pnpm svgo-all
 ```
+
+# Known issues:
+
+Temporary disabled stylelint due to that it and stylelint-prettier don't support ESM

@@ -1,13 +1,12 @@
 import postcssAssets from 'postcss-assets';
 import postcssImport from 'postcss-import';
 import postcssPresetEnv from 'postcss-preset-env';
-// import stylelint from 'stylelint';
 import tailwindcss from 'tailwindcss';
 import tailwindcssNesting from 'tailwindcss/nesting/index.js';
 
 export const plugins = [
   postcssImport(),
-  // stylelint(),
+  // stylelint(), // drop using until updated to support ESM
   tailwindcssNesting(),
   tailwindcss(),
   postcssPresetEnv({
