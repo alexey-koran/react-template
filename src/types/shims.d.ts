@@ -1,5 +1,5 @@
 declare module '*.svg' {
-  import type { FC } from 'react';
+  import type { FC, JSX } from 'react';
 
   const content: FC<JSX.IntrinsicElements['svg']>;
 
@@ -34,6 +34,12 @@ declare module '*.webp' {
   const content: string;
 
   export default content;
+}
+
+declare module '*.module.css' {
+  const classes: Readonly<Record<string, string>>;
+
+  export default classes;
 }
 
 declare module '*.module.pcss' {

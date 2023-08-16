@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const tailwindCssConfig = {
   content: {
     relative: true,
     files: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -19,3 +20,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+export default tailwindCssConfig;

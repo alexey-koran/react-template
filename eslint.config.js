@@ -1,17 +1,22 @@
-const reactPlugin = require('eslint-plugin-react');
-const reactHooks = require('eslint-plugin-react-hooks');
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const reactConfig = require('eslint-plugin-react/configs/recommended');
+import reactPlugin from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 
-const eslint = require('@eslint/js');
-const typescript = require('@typescript-eslint/eslint-plugin');
-const typescriptParser = require('@typescript-eslint/parser');
-const prettierConfig = require('eslint-config-prettier');
-const pluginImport = require('eslint-plugin-import');
-const pluginImportConfig = require('eslint-plugin-import/config/recommended');
-const reactAccessibility = require('eslint-plugin-jsx-a11y');
-const prettierPlugin = require('eslint-plugin-prettier');
-const globals = require('globals');
+import reactConfig from 'eslint-plugin-react/configs/recommended.js';
+
+import eslint from '@eslint/js';
+import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
+import typescriptEslintParser from '@typescript-eslint/parser';
+import prettierConfig from 'eslint-config-prettier';
+import pluginImport from 'eslint-plugin-import';
+import pluginImportConfig from 'eslint-plugin-import/config/recommended.js';
+import reactAccessibility from 'eslint-plugin-jsx-a11y';
+import prettierPlugin from 'eslint-plugin-prettier';
+import globals from 'globals';
+
+const projectDirname = dirname(fileURLToPath(import.meta.url));
 
 const allJsExtensions = 'js,mjs,cjs,jsx,mjsx';
 const allTsExtensions = 'ts,mts,cts,tsx,mtsx';
@@ -459,7 +464,7 @@ const typescriptRules = {
   '@typescript-eslint/restrict-plus-operands': [
     2,
     {
-      checkCompoundAssignments: true,
+      skipCompoundAssignments: true,
     },
   ],
 
@@ -647,7 +652,7 @@ const reactRules = {
   ],
 };
 
-module.exports = [
+const config = [
   {
     files: [supportedJsFileTypes],
     rules: eslint.configs.recommended.rules,
@@ -661,10 +666,10 @@ module.exports = [
         ...globals.es2021,
         JSX: 'readonly',
       },
-      parser: typescriptParser, // @typescript-eslint/parser
+      parser: typescriptEslintParser,
       parserOptions: {
         // start plugin:@typescript-eslint/recommended-requiring-type-checking
-        tsconfigRootDir: __dirname,
+        tsconfigRootDir: resolve(projectDirname),
         project: ['./tsconfig.json'],
         // end plugin:@typescript-eslint/recommended-requiring-type-checking
         ecmaFeatures: {
@@ -724,13 +729,14 @@ module.exports = [
   {
     files: [supportedTsFileTypes],
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': typescriptEslintPlugin,
     },
     rules: {
-      ...typescript.configs['eslint-recommended'].overrides[0].rules, // TODO: Keep up on changes
-      ...typescript.configs.recommended.rules,
-      ...typescript.configs['recommended-requiring-type-checking'].rules,
-      ...typescript.configs.strict.rules,
+      ...typescriptEslintPlugin.configs['eslint-recommended'].rules,
+      ...typescriptEslintPlugin.configs.recommended.rules,
+      ...typescriptEslintPlugin.configs['recommended-type-checked'].rules,
+      ...typescriptEslintPlugin.configs.strict.rules,
+      ...typescriptEslintPlugin.configs['strict-type-checked'].rules,
       ...getTsNamingConventionRule({ isTsx: false }),
       ...typescriptRules,
     },
@@ -738,7 +744,7 @@ module.exports = [
   {
     files: ['**/*.tsx'],
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': typescriptEslintPlugin,
     },
     rules: {
       ...getTsNamingConventionRule({ isTsx: true }),
@@ -750,3 +756,5 @@ module.exports = [
     ignores: ['./build/*'],
   },
 ];
+
+export default config;
