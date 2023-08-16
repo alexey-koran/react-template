@@ -139,7 +139,3 @@ pnpm svgo $FILE_PATH
 ```bash
 pnpm svgo-all
 ```
-
-# Known issues:
-
-Esbuild-loader update to 3.0.1 is blocked by [esm bug with node v20](https://github.com/TypeStrong/ts-node/issues/1997)
