@@ -149,7 +149,6 @@ const baseRules = {
   'no-octal-escape': 2,
   'no-extend-native': 2,
   'no-nested-ternary': 2,
-  'no-param-reassign': 2,
   'no-unreachable-loop': 2,
   'no-negated-condition': 2,
   'no-implicit-coercion': 2,
@@ -168,6 +167,13 @@ const baseRules = {
 
   'no-return-assign': [2, 'always'],
 
+  'no-param-reassign': [
+    'error',
+    {
+      props: true,
+      ignorePropertyModificationsFor: ['state'],
+    },
+  ],
   'no-console': [
     2,
     {
