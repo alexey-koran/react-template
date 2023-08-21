@@ -32,6 +32,12 @@ pnpm dev
 pnpm prod
 ```
 
+**Dev & prod scripts use the 8080 port**
+
+```bash
+http://localhost:8080/
+```
+
 **Clean build folder**
 
 ```bash
