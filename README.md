@@ -4,7 +4,7 @@
 
 [![Minimum node version](https://img.shields.io/badge/min%20node-16.20.1-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Minimum npm version](https://img.shields.io/badge/min%20npm-8.19.4-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-[![Recommended node version](https://img.shields.io/badge/rec%20node-20.3.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-8.6.6-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
+[![Recommended node version](https://img.shields.io/badge/rec%20node-20.5.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-8.6.12-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 
 **AS A PACKAGE MANAGER, I HIGHLY RECOMMEND USING** [PNPM](https://pnpm.io/)
 
@@ -30,6 +30,12 @@ pnpm dev
 
 ```bash
 pnpm prod
+```
+
+**Dev & prod scripts use the 8080 port**
+
+```bash
+http://localhost:8080/
 ```
 
 **Clean build folder**
@@ -142,4 +148,4 @@ pnpm svgo-all
 
 # Known issues:
 
-Temporary disabled stylelint due to that it and stylelint-prettier don't support ESM
+Temporary disabled postcss stylelint due to that it and stylelint-prettier don't support ESM
