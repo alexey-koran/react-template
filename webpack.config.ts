@@ -93,6 +93,7 @@ const configModules = (isProduction: boolean): Required<Configuration>['module']
             importLoaders: 1,
             modules: {
               auto: true,
+              namedExport: false,
               localIdentName: isProduction ? '[hash:base64]' : '[name]-[local]-[hash:base64:8]',
             },
           },
