@@ -1,22 +1,21 @@
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
 import reactConfig from 'eslint-plugin-react/configs/recommended.js';
 
+import { fixupPluginRules } from '@eslint/compat';
 import eslint from '@eslint/js';
-import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
-import typescriptEslintParser from '@typescript-eslint/parser';
-import prettierConfig from 'eslint-config-prettier';
+import stylisticJS from '@stylistic/eslint-plugin-js';
+import stylisticJSX from '@stylistic/eslint-plugin-jsx';
+import stylisticTS from '@stylistic/eslint-plugin-ts';
+// ESLint v9 compatibility utilities
 import pluginImport from 'eslint-plugin-import';
 import pluginImportConfig from 'eslint-plugin-import/config/recommended.js';
 import reactAccessibility from 'eslint-plugin-jsx-a11y';
 import prettierPlugin from 'eslint-plugin-prettier';
+import prettierConfig from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
-
-const projectDirname = dirname(fileURLToPath(import.meta.url));
+import typescriptEslint from 'typescript-eslint';
 
 const allJsExtensions = 'js,mjs,cjs,jsx,mjsx';
 const allTsExtensions = 'ts,mts,cts,tsx,mtsx';
@@ -45,6 +44,10 @@ const getTsNamingConventionRule = ({ isTsx }) => ({
       format: ['strictCamelCase', ...(isTsx ? ['StrictPascalCase'] : [])],
       leadingUnderscore: 'forbid',
       trailingUnderscore: 'forbid',
+    },
+    {
+      selector: 'import',
+      format: ['camelCase', 'PascalCase'],
     },
     {
       selector: 'variable',
@@ -144,6 +147,7 @@ const baseRules = {
   'no-lone-blocks': 2,
   'no-self-compare': 2,
   'no-useless-call': 2,
+  'no-useless-assignment': 2,
   'no-multi-assign': 2,
   'no-new-wrappers': 2,
   'no-octal-escape': 2,
@@ -153,7 +157,6 @@ const baseRules = {
   'no-negated-condition': 2,
   'no-implicit-coercion': 2,
   'no-constructor-return': 2,
-  'newline-per-chained-call': 2,
   'no-promise-executor-return': 2,
   'no-new-native-nonconstructor': 2,
   'no-unmodified-loop-condition': 2,
@@ -265,7 +268,14 @@ const baseRules = {
       allowArrowFunctions: true,
     },
   ],
-  'spaced-comment': [
+  'array-callback-return': [
+    2,
+    {
+      allowImplicit: true,
+      checkForEach: true,
+    },
+  ],
+  '@stylistic/js/spaced-comment': [
     2,
     'always',
     {
@@ -278,13 +288,7 @@ const baseRules = {
       },
     },
   ],
-  'array-callback-return': [
-    2,
-    {
-      allowImplicit: true,
-      checkForEach: true,
-    },
-  ],
+  '@stylistic/js/newline-per-chained-call': 2,
 };
 
 const importRules = {
@@ -428,7 +432,6 @@ const typescriptRules = {
 
   // typescript-eslint/strict rules, default warn
   '@typescript-eslint/prefer-includes': 2,
-  '@typescript-eslint/no-throw-literal': 2,
   '@typescript-eslint/no-base-to-string': 2,
   '@typescript-eslint/no-dynamic-delete': 2,
   '@typescript-eslint/unified-signatures': 2,
@@ -437,13 +440,14 @@ const typescriptRules = {
   '@typescript-eslint/no-invalid-void-type': 2,
   '@typescript-eslint/prefer-function-type': 2,
   '@typescript-eslint/prefer-optional-chain': 2,
-  '@typescript-eslint/prefer-ts-expect-error': 2,
   '@typescript-eslint/no-unnecessary-condition': 2,
   '@typescript-eslint/consistent-type-definitions': 2,
   '@typescript-eslint/prefer-reduce-type-parameter': 2,
   '@typescript-eslint/consistent-indexed-object-style': 2,
   '@typescript-eslint/consistent-generic-constructors': 2,
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 2,
+  '@typescript-eslint/ban-ts-comment': 2,
+  '@typescript-eslint/only-throw-error': 2,
   '@typescript-eslint/array-type': [
     2,
     {
@@ -543,7 +547,7 @@ const typescriptRules = {
       enforceForJSX: true,
     },
   ],
-  '@typescript-eslint/padding-line-between-statements': [
+  '@stylistic/ts/padding-line-between-statements': [
     2,
     {
       blankLine: 'always',
@@ -582,7 +586,6 @@ const reactRules = {
   'react/jsx-props-no-spreading': 0,
 
   'react/jsx-fragments': 2,
-  'react/jsx-pascal-case': 2,
   'react/no-array-index-key': 2,
   'react-hooks/rules-of-hooks': 2,
   'react-hooks/exhaustive-deps': 2,
@@ -593,16 +596,6 @@ const reactRules = {
     2,
     {
       allowDestructuredState: true,
-    },
-  ],
-  'react/jsx-sort-props': [
-    2,
-    {
-      callbacksLast: true,
-      ignoreCase: true,
-      noSortAlphabetically: true,
-      multiline: 'last',
-      reservedFirst: false,
     },
   ],
   'react/jsx-no-duplicate-props': [
@@ -648,12 +641,24 @@ const reactRules = {
     {
       extensions: ['.jsx', '.mjsx', '.tsx', '.mtsx'],
       allow: 'as-needed',
+      ignoreFilesWithoutCode: true,
     },
   ],
   'react/function-component-definition': [
     2,
     {
       namedComponents: 'arrow-function',
+    },
+  ],
+  '@stylistic/jsx/jsx-pascal-case': 2,
+  '@stylistic/jsx/jsx-sort-props': [
+    2,
+    {
+      callbacksLast: true,
+      ignoreCase: true,
+      noSortAlphabetically: true,
+      multiline: 'last',
+      reservedFirst: false,
     },
   ],
 };
@@ -672,12 +677,13 @@ const config = [
         ...globals.es2021,
         JSX: 'readonly',
       },
-      parser: typescriptEslintParser,
+      parser: typescriptEslint.parser,
       parserOptions: {
-        // start plugin:@typescript-eslint/recommended-requiring-type-checking
-        tsconfigRootDir: resolve(projectDirname),
-        project: ['./tsconfig.json'],
-        // end plugin:@typescript-eslint/recommended-requiring-type-checking
+        tsconfigRootDir: import.meta.dirname,
+        projectService: {
+          allowDefaultProject: ['./*.ts', './*.mts', './*.cts', './*.tsx', './*.mtsx'],
+          defaultProject: './tsconfig.json',
+        },
         ecmaFeatures: {
           jsx: true, // eslint-plugin-react
         },
@@ -686,11 +692,11 @@ const config = [
     },
     linterOptions: {
       noInlineConfig: true,
-      reportUnusedDisableDirectives: true,
+      reportUnusedDisableDirectives: 'error',
     },
     settings: {
+      'import/ignore': 'node_modules', // Temporary fix https://github.com/typescript-eslint/typescript-eslint/issues/9450
       'import/extensions': allExtensions,
-      'import/external-module-folders': ['node_modules'],
       // start eslint-import-resolver-typescript
       'import/parsers': {
         '@typescript-eslint/parser': ['.ts', '.mts', '.cts', '.tsx', '.mtsx'],
@@ -718,7 +724,13 @@ const config = [
       react: reactPlugin,
       'react-hooks': reactHooks,
       'jsx-a11y': reactAccessibility,
-      import: pluginImport,
+      // TODO: Remove after eslint-plugin-import update
+      // fixupPluginRules wraps each rule in the given plugin using fixupRule()
+      // and returns a new object that represents the plugin with the fixed-up rules
+      import: fixupPluginRules(pluginImport),
+      '@stylistic/js': stylisticJS,
+      '@stylistic/ts': stylisticTS,
+      '@stylistic/jsx': stylisticJSX,
       prettier: prettierPlugin,
     },
     rules: {
@@ -735,14 +747,11 @@ const config = [
   {
     files: [supportedTsFileTypes],
     plugins: {
-      '@typescript-eslint': typescriptEslintPlugin,
+      '@typescript-eslint': typescriptEslint.plugin,
     },
     rules: {
-      ...typescriptEslintPlugin.configs['eslint-recommended'].rules,
-      ...typescriptEslintPlugin.configs.recommended.rules,
-      ...typescriptEslintPlugin.configs['recommended-type-checked'].rules,
-      ...typescriptEslintPlugin.configs.strict.rules,
-      ...typescriptEslintPlugin.configs['strict-type-checked'].rules,
+      ...typescriptEslint.configs['strictTypeChecked'].rules,
+      ...typescriptEslint.configs['stylisticTypeChecked'].rules,
       ...getTsNamingConventionRule({ isTsx: false }),
       ...typescriptRules,
     },
@@ -750,7 +759,7 @@ const config = [
   {
     files: ['**/*.tsx'],
     plugins: {
-      '@typescript-eslint': typescriptEslintPlugin,
+      '@typescript-eslint': typescriptEslint.plugin,
     },
     rules: {
       ...getTsNamingConventionRule({ isTsx: true }),
