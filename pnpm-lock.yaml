@@ -16,8 +16,8 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@alexey-koran/prettier-config':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.1.0
+        version: 0.1.0
       '@alexey-koran/tsconfig':
         specifier: ^0.0.6
         version: 0.0.6
@@ -201,8 +201,8 @@ importers:
 
 packages:
 
-  '@alexey-koran/prettier-config@0.0.2':
-    resolution: {integrity: sha512-M69sLkeNYGlrmP954/71e2c1NTQrLVp/yW4HobW51CiB+XpLECDCdMmv2+URFBfFZ83Omd4jRSlCV+goaA4V2Q==}
+  '@alexey-koran/prettier-config@0.1.0':
+    resolution: {integrity: sha512-zmYxLBKNSjsZiJOBpzO6DwWzpnBmDdPXMDB+8nWXYe0sXWS7nMDWOF++XbEyXcl8k1XX2ODjWaWUrf/PDdEsBw==}
 
   '@alexey-koran/tsconfig@0.0.6':
     resolution: {integrity: sha512-n9HJjcLnm/JctiArEUeg7RCyQ0xkNS+xVstKobSprylcgd6uJt3LI1zIuvRGX8vvjBdHmtGpRDzRc5EwQFo1HA==}
@@ -4816,8 +4816,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  ufo@1.5.3:
-    resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
+  ufo@1.5.4:
+    resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
 
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
@@ -4828,8 +4828,8 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
-  unenv@1.9.0:
-    resolution: {integrity: sha512-QKnFNznRxmbOF1hDgzpqrlIf6NC5sbZ2OJ+5Wl3OX8uM+LUJXbj4TXvLJCtwbPTmbMHCLIz6JLKNinNsMShK9g==}
+  unenv@1.10.0:
+    resolution: {integrity: sha512-wY5bskBQFL9n3Eca5XnhH6KbUo/tfvkwm9OpcdCvLaeA7piBNbavbOKJySEwQ1V0RH6HvNlSAFRTpvTqgKRQXQ==}
 
   unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -5065,7 +5065,7 @@ packages:
 
 snapshots:
 
-  '@alexey-koran/prettier-config@0.0.2': {}
+  '@alexey-koran/prettier-config@0.1.0': {}
 
   '@alexey-koran/tsconfig@0.0.6': {}
 
@@ -8368,9 +8368,9 @@ snapshots:
       iron-webcrypto: 1.2.1
       ohash: 1.1.3
       radix3: 1.1.2
-      ufo: 1.5.3
+      ufo: 1.5.4
       uncrypto: 0.1.3
-      unenv: 1.9.0
+      unenv: 1.10.0
     transitivePeerDependencies:
       - uWebSockets.js
 
@@ -8927,7 +8927,7 @@ snapshots:
       acorn: 8.12.1
       pathe: 1.1.2
       pkg-types: 1.1.3
-      ufo: 1.5.3
+      ufo: 1.5.4
 
   mrmime@2.0.0: {}
 
@@ -10280,7 +10280,7 @@ snapshots:
 
   typescript@5.5.3: {}
 
-  ufo@1.5.3: {}
+  ufo@1.5.4: {}
 
   unbox-primitive@1.0.2:
     dependencies:
@@ -10293,7 +10293,7 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  unenv@1.9.0:
+  unenv@1.10.0:
     dependencies:
       consola: 3.2.3
       defu: 6.1.4

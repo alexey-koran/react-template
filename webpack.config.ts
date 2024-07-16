@@ -120,7 +120,7 @@ const configModules = (isProduction: boolean): Required<Configuration>['module']
           loader: '@svgr/webpack',
           options: {
             svgoConfig: './svgo.config.cjs',
-            prettierConfig: './prettier.config.cjs',
+            prettierConfig: './prettier.config.mjs',
           },
         },
       ],
