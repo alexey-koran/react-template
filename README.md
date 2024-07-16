@@ -167,6 +167,7 @@ Unstable packages (rc, beta & etc.):
 - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 - [@stylistic/eslint-plugin-js, @stylistic/eslint-plugin-jsx, @stylistic/eslint-plugin-ts](https://eslint.style/)
 - [typescript-eslint](https://www.npmjs.com/package/typescript-eslint)
+- [svgo](https://github.com/svg/svgo)
 
 Unmet peer eslint@9.6.0 for ESLint plugins (wait ESLint v9 support releases):
 
