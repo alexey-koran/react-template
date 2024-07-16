@@ -1,4 +1,6 @@
-module.exports = {
+/** @type {import('svgo').Config} */
+
+export default {
   js2svg: {
     indent: 2,
     pretty: true,
@@ -11,10 +13,10 @@ module.exports = {
           inlineStyles: {
             onlyMatchedOnce: false,
           },
-          removeViewBox: false,
           mergePaths: false,
         },
       },
     },
+    'removeDeprecatedAttrs',
   ],
 };
