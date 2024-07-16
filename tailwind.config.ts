@@ -1,9 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
 const tailwindCssConfig = {
   content: {
     relative: true,
-    files: ['./src/**/*.{js,ts,jsx,tsx}'],
+    files: ['./src/**/*.{js,mjs,cjs,jsx,mjsx,ts,mts,cts,tsx,mtsx}'],
   },
   theme: {
     extend: {
@@ -19,6 +19,6 @@ const tailwindCssConfig = {
     },
   },
   plugins: [],
-};
+} satisfies Config;
 
 export default tailwindCssConfig;
