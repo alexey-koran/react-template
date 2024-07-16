@@ -13,10 +13,10 @@ export default {
           inlineStyles: {
             onlyMatchedOnce: false,
           },
-          removeViewBox: false,
           mergePaths: false,
         },
       },
     },
+    'removeDeprecatedAttrs',
   ],
 };
