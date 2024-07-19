@@ -1,7 +1,7 @@
 import postcssAssets from 'postcss-assets';
 import postcssImport from 'postcss-import';
 import postcssPresetEnv from 'postcss-preset-env';
-// import stylelint from 'stylelint';
+import stylelint from 'stylelint';
 import tailwindcss from 'tailwindcss';
 import tailwindcssNesting from 'tailwindcss/nesting/index.js';
 
@@ -9,7 +9,7 @@ export default () => {
   return {
     plugins: [
       postcssImport(),
-      // stylelint(), // TODO: temporary disabled
+      stylelint(),
       tailwindcssNesting(),
       tailwindcss(),
       postcssPresetEnv({
