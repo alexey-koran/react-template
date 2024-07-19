@@ -160,8 +160,6 @@ pnpm svgo-all
 
 # Known issues:
 
-Temporary disabled postcss stylelint (still buggy)
-
 Unstable packages (rc, beta & etc.):
 
 - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
