@@ -1,8 +1,6 @@
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
-import reactConfig from 'eslint-plugin-react/configs/recommended.js';
-
 import { fixupPluginRules } from '@eslint/compat';
 import eslint from '@eslint/js';
 import stylisticJS from '@stylistic/eslint-plugin-js';
@@ -734,7 +732,7 @@ const config = [
       prettier: prettierPlugin,
     },
     rules: {
-      ...reactConfig.rules,
+      ...reactPlugin.configs.flat.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...reactAccessibility.configs.recommended.rules,
       ...prettierConfig.rules,
