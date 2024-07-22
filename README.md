@@ -167,11 +167,10 @@ Unstable packages (rc, beta & etc.):
 - [typescript-eslint](https://www.npmjs.com/package/typescript-eslint)
 - [svgo](https://github.com/svg/svgo)
 
-Unmet peer eslint@9.6.0 for ESLint plugins (wait ESLint v9 support releases):
+Unmet peer eslint@9 for ESLint plugins (wait ESLint v9 support releases):
 
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
-- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 
 Use fixupPluginRules from [@eslint/compat](https://www.npmjs.com/package/@eslint/compat) to fix [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) plugin rules
 
