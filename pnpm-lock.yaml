@@ -109,8 +109,8 @@ importers:
         specifier: ^7.35.0
         version: 7.35.0(eslint@9.7.0)
       eslint-plugin-react-hooks:
-        specifier: 5.1.0-rc-512b09b2-20240718
-        version: 5.1.0-rc-512b09b2-20240718(eslint@9.7.0)
+        specifier: 5.1.0-rc-d025ddd3-20240722
+        version: 5.1.0-rc-d025ddd3-20240722(eslint@9.7.0)
       fork-ts-checker-webpack-plugin:
         specifier: ^9.0.2
         version: 9.0.2(typescript@5.5.3)(webpack@5.93.0(esbuild@0.21.5)(webpack-cli@5.1.4))
@@ -2650,8 +2650,8 @@ packages:
       eslint-config-prettier:
         optional: true
 
-  eslint-plugin-react-hooks@5.1.0-rc-512b09b2-20240718:
-    resolution: {integrity: sha512-YvKKYx1+hCixrqrVho3nBeCh58jRMBFmtqKLEUjZ7ik9Qfx510mWjBjAS7mvbhY184cUawLn1amsmV2zRn47DA==}
+  eslint-plugin-react-hooks@5.1.0-rc-d025ddd3-20240722:
+    resolution: {integrity: sha512-Nh+NRc59nor6YujgoBOKaZhpHl453+3CWGHrk81G4EqaINMK+Wnp2pZkiOHqS9CdQDYs12i6VPgHR/PEFm3FYA==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
@@ -7952,7 +7952,7 @@ snapshots:
       '@types/eslint': 9.6.0
       eslint-config-prettier: 9.1.0(eslint@9.7.0)
 
-  eslint-plugin-react-hooks@5.1.0-rc-512b09b2-20240718(eslint@9.7.0):
+  eslint-plugin-react-hooks@5.1.0-rc-d025ddd3-20240722(eslint@9.7.0):
     dependencies:
       eslint: 9.7.0
 
