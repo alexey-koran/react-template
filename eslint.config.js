@@ -1,8 +1,6 @@
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
-import reactConfig from 'eslint-plugin-react/configs/recommended.js';
-
 import { fixupPluginRules } from '@eslint/compat';
 import eslint from '@eslint/js';
 import stylisticJS from '@stylistic/eslint-plugin-js';
@@ -143,7 +141,6 @@ const baseRules = {
   'no-lonely-if': 2,
   'no-multi-str': 2,
   'no-extra-bind': 2,
-  'no-new-object': 2,
   'no-lone-blocks': 2,
   'no-self-compare': 2,
   'no-useless-call': 2,
@@ -157,6 +154,7 @@ const baseRules = {
   'no-negated-condition': 2,
   'no-implicit-coercion': 2,
   'no-constructor-return': 2,
+  'no-object-constructor': 2,
   'no-promise-executor-return': 2,
   'no-new-native-nonconstructor': 2,
   'no-unmodified-loop-condition': 2,
@@ -734,7 +732,7 @@ const config = [
       prettier: prettierPlugin,
     },
     rules: {
-      ...reactConfig.rules,
+      ...reactPlugin.configs.flat.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...reactAccessibility.configs.recommended.rules,
       ...prettierConfig.rules,

@@ -4,7 +4,7 @@
 
 [![Minimum node version](https://img.shields.io/badge/min%20node-20.15.1-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.7.0-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-[![Recommended node version](https://img.shields.io/badge/rec%20node-22.4.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-9.5.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
+[![Recommended node version](https://img.shields.io/badge/rec%20node-22.5.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-9.6.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 
 **AS A PACKAGE MANAGER, I HIGHLY RECOMMEND USING** [PNPM](https://pnpm.io/)
 
@@ -160,8 +160,6 @@ pnpm svgo-all
 
 # Known issues:
 
-Temporary disabled postcss stylelint (still buggy)
-
 Unstable packages (rc, beta & etc.):
 
 - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
@@ -169,11 +167,10 @@ Unstable packages (rc, beta & etc.):
 - [typescript-eslint](https://www.npmjs.com/package/typescript-eslint)
 - [svgo](https://github.com/svg/svgo)
 
-Unmet peer eslint@9.6.0 for ESLint plugins (wait ESLint v9 support releases):
+Unmet peer eslint@9 for ESLint plugins (wait ESLint v9 support releases):
 
 - [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)
 - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
-- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 
 Use fixupPluginRules from [@eslint/compat](https://www.npmjs.com/package/@eslint/compat) to fix [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) plugin rules
 
