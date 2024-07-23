@@ -2491,8 +2491,8 @@ packages:
     resolution: {integrity: sha512-kxpoMgrdtkXZ5h0SeraBS1iRntpTpQ3R8ussdb38+UAFnMGX5DDyJXePm+OCHOcoXvHDw7mc2erbJBpDnl7TPw==}
     engines: {node: '>=0.6'}
 
-  enhanced-resolve@5.17.0:
-    resolution: {integrity: sha512-dwDPwZL0dmye8Txp2gzFmA6sxALaSvdRDjPH0viLcKrtlOL3tw62nWWweVD1SdILDTJrbrL6tdWVN58Wo6U3eA==}
+  enhanced-resolve@5.17.1:
+    resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==}
     engines: {node: '>=10.13.0'}
 
   entities@2.2.0:
@@ -4095,8 +4095,8 @@ packages:
     peerDependencies:
       postcss: ^8.0.3
 
-  postcss-resolve-nested-selector@0.1.1:
-    resolution: {integrity: sha512-HvExULSwLqHLgUy1rl3ANIqCsvMS0WHss2UOsXhXnQaZ9VCc2oBvIpXrl00IUFT5ZDITME0o6oiXeiHr2SAIfw==}
+  postcss-resolve-nested-selector@0.1.4:
+    resolution: {integrity: sha512-R6vHqZWgVnTAPq0C+xjyHfEZqfIYboCBVSy24MjxEDm+tIh1BU4O6o7DP7AA7kHzf136d+Qc5duI4tlpHjixDw==}
 
   postcss-safe-parser@7.0.0:
     resolution: {integrity: sha512-ovehqRNVCpuFzbXoTb4qLtyzK3xn3t/CUBxOs8LsnQjQrShaB4lKiHoVqY8ANaC0hBMHq5QVWk77rwGklFUDrg==}
@@ -7671,7 +7671,7 @@ snapshots:
       memory-fs: 0.2.0
       tapable: 0.1.10
 
-  enhanced-resolve@5.17.0:
+  enhanced-resolve@5.17.1:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -7851,7 +7851,7 @@ snapshots:
   eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.0-alpha.51(eslint@9.7.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.7.0):
     dependencies:
       debug: 4.3.5
-      enhanced-resolve: 5.17.0
+      enhanced-resolve: 5.17.1
       eslint: 9.7.0
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@8.0.0-alpha.51(eslint@9.7.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.0-alpha.51(eslint@9.7.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.7.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.21.5)(webpack-cli@5.1.4)))(eslint@9.7.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@8.0.0-alpha.51(eslint@9.7.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint-import-resolver-webpack@0.13.8)(eslint@9.7.0)
@@ -9467,7 +9467,7 @@ snapshots:
     dependencies:
       postcss: 8.4.39
 
-  postcss-resolve-nested-selector@0.1.1: {}
+  postcss-resolve-nested-selector@0.1.4: {}
 
   postcss-safe-parser@7.0.0(postcss@8.4.39):
     dependencies:
@@ -10056,7 +10056,7 @@ snapshots:
       normalize-path: 3.0.0
       picocolors: 1.0.1
       postcss: 8.4.39
-      postcss-resolve-nested-selector: 0.1.1
+      postcss-resolve-nested-selector: 0.1.4
       postcss-safe-parser: 7.0.0(postcss@8.4.39)
       postcss-selector-parser: 6.1.1
       postcss-value-parser: 4.2.0
@@ -10486,7 +10486,7 @@ snapshots:
       acorn-import-attributes: 1.9.5(acorn@8.12.1)
       browserslist: 4.23.2
       chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.17.0
+      enhanced-resolve: 5.17.1
       es-module-lexer: 1.5.4
       eslint-scope: 5.1.1
       events: 3.3.0
