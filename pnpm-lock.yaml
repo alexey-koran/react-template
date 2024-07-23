@@ -16,8 +16,8 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@alexey-koran/prettier-config':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.1
+        version: 0.1.1
       '@alexey-koran/tsconfig':
         specifier: ^0.1.0
         version: 0.1.0
@@ -201,8 +201,8 @@ importers:
 
 packages:
 
-  '@alexey-koran/prettier-config@0.1.0':
-    resolution: {integrity: sha512-zmYxLBKNSjsZiJOBpzO6DwWzpnBmDdPXMDB+8nWXYe0sXWS7nMDWOF++XbEyXcl8k1XX2ODjWaWUrf/PDdEsBw==}
+  '@alexey-koran/prettier-config@0.1.1':
+    resolution: {integrity: sha512-glzqP90tgQyMyJZjO+j8al1Y9rNyWGydt+mUgLd/srGRBpnqI53TVZHnNSo/LoNXxy/11ELc6lwkdZFWmaMIAg==}
 
   '@alexey-koran/tsconfig@0.1.0':
     resolution: {integrity: sha512-dk9kyKv7d0BAgy/4YuppXqL/4nHkGr1LudusYnDnBijUXmYX5yJNtBixcjrlaP0Vp5jVt0yMhewIGnj2d1fR7g==}
@@ -5077,7 +5077,7 @@ packages:
 
 snapshots:
 
-  '@alexey-koran/prettier-config@0.1.0': {}
+  '@alexey-koran/prettier-config@0.1.1': {}
 
   '@alexey-koran/tsconfig@0.1.0': {}
 

@@ -39,7 +39,7 @@
     "svgo-all": "svgo -r -f src"
   },
   "devDependencies": {
-    "@alexey-koran/prettier-config": "^0.1.0",
+    "@alexey-koran/prettier-config": "^0.1.1",
     "@alexey-koran/tsconfig": "^0.1.0",
     "@eslint/compat": "^1.1.1",
     "@eslint/config-inspector": "^0.5.2",
