@@ -61,7 +61,7 @@ const configOptimization: Configuration['optimization'] = {
 const configModules = (isProduction: boolean): Required<Configuration>['module'] => ({
   rules: [
     {
-      test: /\.(js|cjs|mjs|ts|tsx)$/,
+      test: /\.(js|cjs|mjs|jsx|cjsx|mjsx|ts|cts|mts|tsx|ctsx|mtsx)$/,
       loader: 'esbuild-loader',
       exclude: /node_modules/,
       options: {
@@ -178,14 +178,16 @@ const config = (_env: Env, { analyze = false, hot = false, mode }: Options): Con
         '.wasm',
         '.json',
         '.js',
-        '.mjs',
         '.cjs',
+        '.mjs',
         '.jsx',
+        '.cjsx',
         '.mjsx',
         '.ts',
-        '.mts',
         '.cts',
+        '.mts',
         '.tsx',
+        '.ctsx',
         '.mtsx',
         '.d.ts',
       ],
