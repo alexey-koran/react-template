@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss';
 const tailwindCssConfig = {
   content: {
     relative: true,
-    files: ['./src/**/*.{js,mjs,cjs,jsx,mjsx,ts,mts,cts,tsx,mtsx}'],
+    files: ['./src/**/*.{js,cjs,mjs,jsx,cjsx,mjsx,ts,cts,mts,tsx,ctsx,mtsx}'],
   },
   theme: {
     extend: {

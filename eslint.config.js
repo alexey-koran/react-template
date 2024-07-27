@@ -15,18 +15,20 @@ import prettierConfig from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import typescriptEslint from 'typescript-eslint';
 
-const allJsExtensions = 'js,mjs,cjs,jsx,mjsx';
-const allTsExtensions = 'ts,mts,cts,tsx,mtsx';
+const allJsExtensions = 'js,cjs,mjs,jsx,cjsx,mjsx';
+const allTsExtensions = 'ts,cts,mts,tsx,ctsx,mtsx';
 const allExtensions = [
   '.js',
-  '.mjs',
   '.cjs',
+  '.mjs',
   '.jsx',
+  '.cjsx',
   '.mjsx',
   '.ts',
-  '.mts',
   '.cts',
+  '.mts',
   '.tsx',
+  '.ctsx',
   '.mtsx',
 ];
 
@@ -637,7 +639,7 @@ const reactRules = {
   'react/jsx-filename-extension': [
     2,
     {
-      extensions: ['.jsx', '.mjsx', '.tsx', '.mtsx'],
+      extensions: ['.jsx', '.cjsx', '.mjsx', '.tsx', '.ctsx', '.mtsx'],
       allow: 'as-needed',
       ignoreFilesWithoutCode: true,
     },
@@ -679,7 +681,7 @@ const config = [
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
         projectService: {
-          allowDefaultProject: ['./*.ts', './*.mts', './*.cts', './*.tsx', './*.mtsx'],
+          allowDefaultProject: ['./*.ts', './*.cts', './*.mts', './*.tsx', './*.ctsx', './*.mtsx'],
           defaultProject: './tsconfig.json',
         },
         ecmaFeatures: {
@@ -697,7 +699,7 @@ const config = [
       'import/extensions': allExtensions,
       // start eslint-import-resolver-typescript
       'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.mts', '.cts', '.tsx', '.mtsx'],
+        '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx', '.ctsx', '.mtsx'],
       },
       // eslint-import-resolver-webpack
       'import/resolver': {
