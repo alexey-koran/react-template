@@ -32,6 +32,7 @@ http://localhost:8080/
 
 > [!NOTE]
 > allJsTsExtensions = js, cjs, mjs, jsx, cjsx, mjsx, ts, cts, mts, tsx, ctsx, mtsx
+>
 > For the more details check [scripts section in package.json](./package.json#L17)
 
 | Command                    | Description                                              | Path                            |
