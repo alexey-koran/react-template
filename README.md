@@ -23,16 +23,16 @@ pnpm i
 
 # Scripts
 
-Dev & prod scripts use the **8080** port
+> [!IMPORTANT]
+> Dev & prod scripts use the **8080** port
 
 ```bash
 http://localhost:8080/
 ```
 
-> For the more details check [scripts section in package.json](./package.json#L17)
-
 > [!NOTE]
 > allJsTsExtensions = js, cjs, mjs, jsx, cjsx, mjsx, ts, cts, mts, tsx, ctsx, mtsx
+> For the more details check [scripts section in package.json](./package.json#L17)
 
 | Command                    | Description                                              | Path                            |
 | -------------------------- | -------------------------------------------------------- | ------------------------------- |
