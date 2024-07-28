@@ -45,7 +45,7 @@ http://localhost:8080/
 | `pnpm buildapp`            | build application for deploy                             | `./build`                       |
 | `pnpm build`               | clean build folder & rebuild application for deploy      | `./build`                       |
 | `pnpm analyze`             | analyze webpack bundle                                   |                                 |
-| `pnpm prepare`             | utility script, runs automatically after installation`   |                                 |
+| `pnpm prepare`             | utility script, runs automatically after installation    |                                 |
 | `pnpm prettier`            | code format check                                        | `**/*.{allJsTsExtensions,pcss}` |
 | `pnpm prettier:fix`        | code format autofix                                      | `**/*.{allJsTsExtensions,pcss}` |
 | `pnpm lint`                | eslint check                                             | `**/*.{allJsTsExtensions}`      |
@@ -56,7 +56,7 @@ http://localhost:8080/
 | `pnpm lint:css:fix-staged` | stylelint autofix                                        | only on git staged files        |
 | `pnpm lint-all`            | prettier, eslint & stylelint check processes in order    | see above                       |
 | `pnpm fix-all`             | prettier, eslint & stylelint autofix processes in order  | see above                       |
-| `pnpm fix-staged`          | lint-staged fix scripts from .lintstagedrc               | only on git staged files        |
+| `pnpm fix-staged`          | lint-staged fix scripts from `.lintstagedrc`             | only on git staged files        |
 | `pnpm test:eslint-config`  | eslint config inspector                                  |                                 |
 | `pnpm test:webpack-config` | webpack config test                                      |                                 |
 | `pnpm svgo $FILE_PATH`     | svgo on passed `.svg` file for optimization              | `$FILE_PATH`                    |
