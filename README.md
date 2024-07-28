@@ -76,6 +76,6 @@ http://localhost:8080/
 | `pnpm svgo-all`            | svgo on all `.svg` files in the project for optimization | `./src`                         |
 |                            |                                                          |                                 |
 |                            | `Utility`                                                |                                 |
-| `pnpm prepare`             | runs automatically after packages installation (husky)   |                                 |
+| `pnpm prepare`             | runs automatically after installation, setup husky       |                                 |
 
 </details>
