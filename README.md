@@ -7,13 +7,14 @@
 | [![Minimum node version](https://img.shields.io/badge/min%20node-20.15.1-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.7.0-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
 | [![Recommended node version](https://img.shields.io/badge/rec%20node-22.5.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-9.6.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                      |
 
-## Recommendations
-
-### [PNPM](https://pnpm.io/) as a package manager
-
-### [NVM](https://github.com/nvm-sh/nvm) as a Node.js version manager
-
 # Installation
+
+> [!TIP]
+> Highly recommend
+>
+> [PNPM](https://pnpm.io/) as a **package manager**
+>
+> [NVM](https://github.com/nvm-sh/nvm) as a **Node.js version manager**
 
 ```bash
 git clone repo_url
@@ -23,35 +24,40 @@ pnpm i
 
 # Scripts
 
-Dev & prod scripts use the **8080** port
+> [!IMPORTANT]
+> Dev & prod scripts use the **8080** port
 
 ```bash
 http://localhost:8080/
 ```
 
-> For the more details check **scripts** section in `package.json`
+> [!NOTE]
+>
+> `allJsTsExtensions` = js, cjs, mjs, jsx, cjsx, mjsx, ts, cts, mts, tsx, ctsx, mtsx
+>
+> For the more details check [scripts section in package.json](./package.json#L17)
 
-| Command                    | Description                                                       | Path                                                                             |
-| -------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `pnpm dev`                 | dev-server in **developer** mode (support hot reload)             |                                                                                  |
-| `pnpm prod`                | dev-server in **production** mode (with some build optimizations) |                                                                                  |
-| `pnpm clean`               | clean build folder                                                | `./build`                                                                        |
-| `pnpm buildapp`            | build application for deploy                                      | `./build`                                                                        |
-| `pnpm build`               | clean build folder & rebuild application for deploy               | `./build`                                                                        |
-| `pnpm analyze`             | analyze webpack bundle                                            |                                                                                  |
-| `pnpm prepare`             | utility script, runs automatically once after installation`       |                                                                                  |
-| `pnpm prettier`            | code format check                                                 | `\*\*\/\*.+(js\|cjs\|mjs\|jsx\|cjsx\|mjsx\|ts\|cts\|mts\|tsx\|ctsx\|mtsx\|pcss)` |
-| `pnpm prettier:fix`        | code format autofix                                               | `\*\*\/\*.+(js\|cjs\|mjs\|jsx\|cjsx\|mjsx\|ts\|cts\|mts\|tsx\|ctsx\|mtsx\|pcss)` |
-| `pnpm lint`                | eslint check                                                      | `\*\*\/\*.{js,cjs,mjs,jsx,cjsx,mjsx,ts,cts,mts,tsx,ctsx,mtsx}`                   |
-| `pnpm lint:fix`            | eslint autofix                                                    | `\*\*\/\*.{js,cjs,mjs,jsx,cjsx,mjsx,ts,cts,mts,tsx,ctsx,mtsx}`                   |
-| `pnpm lint:fix-staged`     | eslint autofix                                                    | only on git staged files                                                         |
-| `pnpm lint:css`            | stylelint check                                                   | `./src`                                                                          |
-| `pnpm lint:css:fix`        | stylelint autofix                                                 | `./src`                                                                          |
-| `pnpm lint:css:fix-staged` | stylelint autofix                                                 | only on git staged files                                                         |
-| `pnpm lint-all`            | prettier, eslint & stylelint check processes in order             | see above                                                                        |
-| `pnpm fix-all`             | prettier, eslint & stylelint autofix processes in order           | see above                                                                        |
-| `pnpm fix-staged`          | lint-staged fix scripts from .lintstagedrc                        | only on git staged files                                                         |
-| `pnpm test:eslint-config`  | eslint config inspector                                           |                                                                                  |
-| `pnpm test:webpack-config` | webpack config test                                               |                                                                                  |
-| `pnpm svgo $FILE_PATH`     | svgo on passed `.svg` file for optimization                       | `$FILE_PATH`                                                                     |
-| `pnpm svgo-all`            | svgo on all `.svg` files in the project for optimization          | `./src`                                                                          |
+| Command                    | Description                                              | Path                            |
+| -------------------------- | -------------------------------------------------------- | ------------------------------- |
+| `pnpm dev`                 | dev-server in **developer** mode (hot reload)            |                                 |
+| `pnpm prod`                | dev-server in **production** mode (build optimizations)  |                                 |
+| `pnpm clean`               | clean build folder                                       | `./build`                       |
+| `pnpm buildapp`            | build application for deploy                             | `./build`                       |
+| `pnpm build`               | clean build folder & rebuild application for deploy      | `./build`                       |
+| `pnpm analyze`             | analyze webpack bundle                                   |                                 |
+| `pnpm prepare`             | utility script, runs automatically after installation    |                                 |
+| `pnpm prettier`            | code format check                                        | `**/*.{allJsTsExtensions,pcss}` |
+| `pnpm prettier:fix`        | code format autofix                                      | `**/*.{allJsTsExtensions,pcss}` |
+| `pnpm lint`                | eslint check                                             | `**/*.{allJsTsExtensions}`      |
+| `pnpm lint:fix`            | eslint autofix                                           | `**/*.{allJsTsExtensions}`      |
+| `pnpm lint:fix-staged`     | eslint autofix                                           | only on git staged files        |
+| `pnpm lint:css`            | stylelint check                                          | `./src`                         |
+| `pnpm lint:css:fix`        | stylelint autofix                                        | `./src`                         |
+| `pnpm lint:css:fix-staged` | stylelint autofix                                        | only on git staged files        |
+| `pnpm lint-all`            | prettier, eslint & stylelint check processes in order    | see above                       |
+| `pnpm fix-all`             | prettier, eslint & stylelint autofix processes in order  | see above                       |
+| `pnpm fix-staged`          | lint-staged fix scripts from `.lintstagedrc`             | only on git staged files        |
+| `pnpm test:eslint-config`  | eslint config inspector                                  |                                 |
+| `pnpm test:webpack-config` | webpack config test                                      |                                 |
+| `pnpm svgo $FILE_PATH`     | svgo on passed `.svg` file for optimization              | `$FILE_PATH`                    |
+| `pnpm svgo-all`            | svgo on all `.svg` files in the project for optimization | `./src`                         |

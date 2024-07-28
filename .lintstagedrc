@@ -1,7 +1,7 @@
 {
-  "*.+(js|cjs|mjs|jsx|cjsx|mjsx|ts|cts|mts|tsx|ctsx|mtsx)": [
+  "*.{js,cjs,mjs,jsx,cjsx,mjsx,ts,cts,mts,tsx,ctsx,mtsx}": [
     "pnpm prettier:fix",
     "pnpm lint:fix-staged"
   ],
-  "*.+(css|pcss)": ["pnpm lint:css:fix-staged"]
+  "*.{css,pcss}": ["pnpm lint:css:fix-staged"]
 }
