@@ -7,13 +7,14 @@
 | [![Minimum node version](https://img.shields.io/badge/min%20node-20.15.1-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.7.0-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
 | [![Recommended node version](https://img.shields.io/badge/rec%20node-22.5.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-9.6.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                      |
 
-## Recommendations
-
-### [PNPM](https://pnpm.io/) as a package manager
-
-### [NVM](https://github.com/nvm-sh/nvm) as a Node.js version manager
-
 # Installation
+
+> [!TIP]
+> Highly recommend
+>
+> [PNPM](https://pnpm.io/) as a **package manager**
+>
+> [NVM](https://github.com/nvm-sh/nvm) as a **Node.js version manager**
 
 ```bash
 git clone repo_url
