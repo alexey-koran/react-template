@@ -37,6 +37,10 @@ http://localhost:8080/
 >
 > For the more details check [scripts section in package.json](./package.json#L17)
 
+<details open>
+
+<summary><h3>Scripts table</h3></summary>
+
 | Command                    | Description                                              | Path                            |
 | -------------------------- | -------------------------------------------------------- | ------------------------------- |
 |                            |                                                          |                                 |
@@ -73,3 +77,5 @@ http://localhost:8080/
 |                            |                                                          |                                 |
 |                            | `Utility`                                                |                                 |
 | `pnpm prepare`             | runs automatically after packages installation (husky)   |                                 |
+
+</details>
