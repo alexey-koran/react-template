@@ -68,7 +68,7 @@ http://localhost:8080/
 |                            |                                                          |                                 |
 |                            | `Analyzation & config check`                             |                                 |
 | `pnpm analyze`             | analyze webpack bundle                                   |                                 |
-| `pnpm test:eslint-config`  | eslint config inspector                                  |                                 |
+| `pnpm test:eslint-config`  | eslint config inspector, displays flat configs & rules   |                                 |
 | `pnpm test:webpack-config` | webpack config test                                      |                                 |
 |                            |                                                          |                                 |
 |                            | `Optimization`                                           |                                 |
