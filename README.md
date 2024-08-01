@@ -25,7 +25,7 @@ pnpm i
 # Scripts
 
 > [!IMPORTANT]
-> Dev & prod scripts use the **8080** port
+> Development server use the **8080** port
 
 ```bash
 http://localhost:8080/
