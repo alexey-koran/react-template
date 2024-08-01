@@ -4,7 +4,7 @@
 
 | Node                                                                                                                                        | Package manager                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Minimum node version](https://img.shields.io/badge/min%20node-20.15.1-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.7.0-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
+| [![Minimum node version](https://img.shields.io/badge/min%20node-20.16.0-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.8.1-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
 | [![Recommended node version](https://img.shields.io/badge/rec%20node-22.5.1-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-9.6.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                      |
 
 # Installation
@@ -37,15 +37,23 @@ http://localhost:8080/
 >
 > For the more details check [scripts section in package.json](./package.json#L17)
 
+<details open>
+
+<summary><h3>Scripts table</h3></summary>
+
 | Command                    | Description                                              | Path                            |
 | -------------------------- | -------------------------------------------------------- | ------------------------------- |
+|                            |                                                          |                                 |
+|                            | `Dev server`                                             |                                 |
 | `pnpm dev`                 | dev-server in **developer** mode (hot reload)            |                                 |
 | `pnpm prod`                | dev-server in **production** mode (build optimizations)  |                                 |
+|                            |                                                          |                                 |
+|                            | `Build application`                                      |                                 |
 | `pnpm clean`               | clean build folder                                       | `./build`                       |
 | `pnpm buildapp`            | build application for deploy                             | `./build`                       |
-| `pnpm build`               | clean build folder & rebuild application for deploy      | `./build`                       |
-| `pnpm analyze`             | analyze webpack bundle                                   |                                 |
-| `pnpm prepare`             | utility script, runs automatically after installation    |                                 |
+| `pnpm build`               | clean build folder & build application for deploy        | `./build`                       |
+|                            |                                                          |                                 |
+|                            | `Code linting & formatting`                              |                                 |
 | `pnpm prettier`            | code format check                                        | `**/*.{allJsTsExtensions,pcss}` |
 | `pnpm prettier:fix`        | code format autofix                                      | `**/*.{allJsTsExtensions,pcss}` |
 | `pnpm lint`                | eslint check                                             | `**/*.{allJsTsExtensions}`      |
@@ -56,8 +64,18 @@ http://localhost:8080/
 | `pnpm lint:css:fix-staged` | stylelint autofix                                        | only on git staged files        |
 | `pnpm lint-all`            | prettier, eslint & stylelint check processes in order    | see above                       |
 | `pnpm fix-all`             | prettier, eslint & stylelint autofix processes in order  | see above                       |
-| `pnpm fix-staged`          | lint-staged fix scripts from `.lintstagedrc`             | only on git staged files        |
-| `pnpm test:eslint-config`  | eslint config inspector                                  |                                 |
+| `pnpm fix-staged`          | scripts from `.lintstagedrc` in autofix mode             | only on git staged files        |
+|                            |                                                          |                                 |
+|                            | `Analyzation & config check`                             |                                 |
+| `pnpm analyze`             | analyze webpack bundle                                   |                                 |
+| `pnpm test:eslint-config`  | eslint config inspector, displays flat configs & rules   |                                 |
 | `pnpm test:webpack-config` | webpack config test                                      |                                 |
+|                            |                                                          |                                 |
+|                            | `Optimization`                                           |                                 |
 | `pnpm svgo $FILE_PATH`     | svgo on passed `.svg` file for optimization              | `$FILE_PATH`                    |
 | `pnpm svgo-all`            | svgo on all `.svg` files in the project for optimization | `./src`                         |
+|                            |                                                          |                                 |
+|                            | `Utility`                                                |                                 |
+| `pnpm prepare`             | runs automatically after installation, setup husky       |                                 |
+
+</details>
