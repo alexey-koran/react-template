@@ -80,6 +80,8 @@ http://localhost:8080/
 
 </details>
 
+# Dependencies
+
 > [!NOTE]
 >
 > For the more details check [dev & prod dependencies in package.json](./package.json#L41)
