@@ -80,6 +80,10 @@ http://localhost:8080/
 
 </details>
 
+> [!NOTE]
+>
+> For the more details check [dev & prod dependencies in package.json](./package.json#L41)
+
 <details open>
 
 <summary><h3>Dependencies table</h3></summary>
@@ -134,7 +138,7 @@ http://localhost:8080/
 | stylelint                         | mighty CSS linter that helps you avoid errors and enforce conventions                                                                   | [v16.8.\*](https://github.com/stylelint/stylelint)                        |
 |                                   | `Configs`                                                                                                                               |                                                                           |
 | eslint-config-prettier            | turns off all rules that are unnecessary or might conflict with [Prettier](https://github.com/prettier/prettier)                        | [v9.1.\*](https://github.com/prettier/eslint-config-prettier)             |
-| @alexey-koran/prettier-config     | Prettier [sharing configuration](https://prettier.io/docs/en/configuration.html#sharing-configurations)                                 | [v.0.1\*](https://npmjs.com/@alexey-koran/prettier-config)                |
+| @alexey-koran/prettier-config     | Prettier [sharing configuration](https://prettier.io/docs/en/configuration.html#sharing-configurations)                                 | [v0.1\*](https://npmjs.com/@alexey-koran/prettier-config)                 |
 | stylelint-config-clean-order      | order your styles with [stylelint-order](https://github.com/hudochenkov/stylelint-order)                                                | [v6.1.\*](https://github.com/kutsan/stylelint-config-clean-order)         |
 | stylelint-config-standard         | standard shareable config for [Stylelint](https://stylelint.io/)                                                                        | [v36.0.\*](https://github.com/stylelint/stylelint-config-standard)        |
 |                                   | `Plugins`                                                                                                                               |                                                                           |
