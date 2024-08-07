@@ -165,9 +165,6 @@ importers:
       stylelint-config-standard:
         specifier: ^36.0.1
         version: 36.0.1(stylelint@16.8.1(typescript@5.5.4))
-      stylelint-order:
-        specifier: ^6.0.4
-        version: 6.0.4(stylelint@16.8.1(typescript@5.5.4))
       stylelint-prettier:
         specifier: ^5.0.2
         version: 5.0.2(prettier@3.3.3)(stylelint@16.8.1(typescript@5.5.4))

@@ -2,7 +2,7 @@
 
 export default {
   extends: ['stylelint-config-standard', 'stylelint-config-clean-order'],
-  plugins: ['stylelint-order', 'stylelint-prettier'],
+  plugins: ['stylelint-prettier'],
   rules: {
     'prettier/prettier': true,
     'at-rule-no-unknown': [
