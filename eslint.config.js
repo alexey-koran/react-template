@@ -768,7 +768,7 @@ const config = [
   {
     // The new config system no longer supports .eslintignore files
     // https://eslint.org/blog/2022/10/eslint-v8.25.0-released/#highlights
-    ignores: ['build', 'node_modules'],
+    ignores: ['build'],
   },
 ];
 
