@@ -16,8 +16,8 @@ export const importRules = {
   'import/no-namespace': 2,
   'import/no-unresolved': 2, // eslint-import-resolver-typescript
   'import/no-empty-named-blocks': 2,
+  'import/no-useless-path-segments': 2,
 
-  'import/no-useless-path-segments': [2],
   'import/no-duplicates': [
     2,
     {
