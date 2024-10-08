@@ -43,7 +43,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@alexey-koran/eslint-config": "^0.2.0",
+    "@alexey-koran/eslint-config": "^0.2.1",
     "@alexey-koran/prettier-config": "^0.1.1",
     "@alexey-koran/tsconfig": "^0.1.0",
     "@eslint/config-inspector": "^0.5.4",
