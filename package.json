@@ -15,12 +15,12 @@
   },
   "homepage": "https://github.com/alexey-koran/react-template#readme",
   "scripts": {
-    "dev": "node --import ./ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=development",
-    "prod": "node --import ./ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=production",
-    "buildapp": "node --import ./ts-node.register.mjs node_modules/webpack/bin/webpack --mode=production",
+    "dev": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=development",
+    "prod": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=production",
+    "buildapp": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack --mode=production",
     "clean": "rm -f -r build",
     "build": "pnpm clean && pnpm buildapp",
-    "analyze": "node --import ./ts-node.register.mjs node_modules/webpack/bin/webpack --analyze --mode=production",
+    "analyze": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack --analyze --mode=production",
     "prepare": "husky && echo 'pnpm lint-staged' > .husky/pre-commit",
     "prettier": "prettier --check \"**/*.{js,cjs,mjs,jsx,cjsx,mjsx,ts,cts,mts,tsx,ctsx,mtsx,pcss}\"",
     "prettier:fix": "prettier --write \"**/*.{js,cjs,mjs,jsx,cjsx,mjsx,ts,cts,mts,tsx,ctsx,mtsx,pcss}\"",
@@ -34,7 +34,7 @@
     "fix-all": "pnpm prettier:fix && pnpm lint:fix && pnpm lint:css:fix",
     "fix-staged": "lint-staged",
     "test:eslint-config": "eslint-config-inspector",
-    "test:webpack-config": "node --import ./ts-node.register.mjs node_modules/webpack/bin/webpack configtest",
+    "test:webpack-config": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack configtest",
     "svgo": "cross-env svgo $FILE",
     "svgo-all": "svgo -r -f src"
   },
@@ -43,7 +43,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@alexey-koran/eslint-config": "^0.1.0",
+    "@alexey-koran/eslint-config": "^0.2.1",
     "@alexey-koran/prettier-config": "^0.1.1",
     "@alexey-koran/tsconfig": "^0.1.0",
     "@eslint/config-inspector": "^0.5.4",
@@ -51,8 +51,8 @@
     "@svgr/webpack": "^8.1.0",
     "@types/dotenv-webpack": "^7.0.7",
     "@types/html-webpack-plugin": "^3.2.9",
-    "@types/node": "^22.5.1",
-    "@types/react": "^18.3.4",
+    "@types/node": "^22.5.4",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@types/webpack": "^5.28.5",
     "@types/webpack-bundle-analyzer": "^4.7.0",
@@ -66,9 +66,9 @@
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "html-webpack-plugin": "^5.6.0",
     "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "mini-css-extract-plugin": "^2.9.1",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.45",
     "postcss-assets": "^6.0.0",
     "postcss-import": "^16.1.0",
     "postcss-loader": "^8.1.1",
@@ -88,6 +88,6 @@
     "webpack": "^5.94.0",
     "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "webpack-dev-server": "^5.1.0"
   }
 }
