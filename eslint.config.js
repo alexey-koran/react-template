@@ -17,7 +17,6 @@ const config = [
       },
     },
     settings: {
-      'import/ignore': 'node_modules', // Temporary fix https://github.com/typescript-eslint/typescript-eslint/issues/9450
       'import/extensions': supportedExtensions.all,
       // start eslint-import-resolver-typescript
       'import/parsers': {
