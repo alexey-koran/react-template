@@ -142,7 +142,7 @@ const getConfigPlugins = ({
   new Dotenv(),
   new HtmlWebpackPlugin({
     title: 'React and typescript template',
-    template: './src/public/index.html',
+    template: './public/index.html',
   }),
   new MiniCssExtractPlugin({
     filename: isProduction ? 'css/[name].[contenthash].css' : 'css/[name].css',
