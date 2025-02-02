@@ -13,6 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/alexey-koran/react-template.git"
   },
+  "keywords": [
+    "react",
+    "typescript",
+    "react template",
+    "react boilerplate"
+  ],
   "homepage": "https://github.com/alexey-koran/react-template#readme",
   "scripts": {
     "dev": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=development",
