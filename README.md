@@ -4,8 +4,8 @@
 
 | Node                                                                                                                                        | Package manager                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Minimum node version](https://img.shields.io/badge/min%20node-20.18.0-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.8.2-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
-| [![Recommended node version](https://img.shields.io/badge/rec%20node-23.0.0-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-9.12.2-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                     |
+| [![Minimum node version](https://img.shields.io/badge/min%20node-22.13.1-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.9.2-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
+| [![Recommended node version](https://img.shields.io/badge/rec%20node-23.7.0-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-9.15.4-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                     |
 
 # Installation
 
