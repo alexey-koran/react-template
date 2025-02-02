@@ -7,6 +7,7 @@ import {
 const config = [
   ...shareableConfig,
   {
+    name: 'local/all',
     files: [supportedFileTypes.all],
     languageOptions: {
       parserOptions: {
@@ -40,6 +41,7 @@ const config = [
     },
   },
   {
+    name: 'local/ignores',
     // The new config system no longer supports .eslintignore files
     // https://eslint.org/blog/2022/10/eslint-v8.25.0-released/#highlights
     ignores: ['build'],
