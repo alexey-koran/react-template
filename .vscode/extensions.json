@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "mikestead.dotenv",
     "formulahendry.auto-rename-tag",
     "cpylua.language-postcss",
     "SonarSource.sonarlint-vscode",
@@ -10,5 +9,5 @@
     "streetsidesoftware.code-spell-checker-russian",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode"
-  ],
+  ]
 }
