@@ -19,8 +19,8 @@ importers:
         specifier: ^0.3.0
         version: 0.3.0(@eslint/js@9.19.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.22.0(eslint@9.19.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.19.0(jiti@1.21.6))(prettier@3.3.3)(typescript@5.5.4)(webpack@5.94.0)
       '@alexey-koran/prettier-config':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.3
+        version: 0.1.3(prettier@3.3.3)
       '@alexey-koran/tsconfig':
         specifier: ^0.1.0
         version: 0.1.0
@@ -162,8 +162,10 @@ packages:
       '@eslint/js': '>=9.19.0'
       eslint: '>=9.19.0'
 
-  '@alexey-koran/prettier-config@0.1.1':
-    resolution: {integrity: sha512-glzqP90tgQyMyJZjO+j8al1Y9rNyWGydt+mUgLd/srGRBpnqI53TVZHnNSo/LoNXxy/11ELc6lwkdZFWmaMIAg==}
+  '@alexey-koran/prettier-config@0.1.3':
+    resolution: {integrity: sha512-nq2F/+pPN/hCpkiiujymBPEdS4ORyi7pqzg7cjBMxVBZBE0czTq++X+ShIhaK/SRQJnySbcQiKaLH/azyxwXsQ==}
+    peerDependencies:
+      prettier: ^3
 
   '@alexey-koran/tsconfig@0.1.0':
     resolution: {integrity: sha512-dk9kyKv7d0BAgy/4YuppXqL/4nHkGr1LudusYnDnBijUXmYX5yJNtBixcjrlaP0Vp5jVt0yMhewIGnj2d1fR7g==}
@@ -5297,7 +5299,9 @@ snapshots:
       - typescript
       - webpack
 
-  '@alexey-koran/prettier-config@0.1.1': {}
+  '@alexey-koran/prettier-config@0.1.3(prettier@3.3.3)':
+    dependencies:
+      prettier: 3.3.3
 
   '@alexey-koran/tsconfig@0.1.0': {}
 
