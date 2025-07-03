@@ -21,6 +21,9 @@
   ],
   "homepage": "https://github.com/alexey-koran/react-template#readme",
   "packageManager": "pnpm@9.15.2",
+  "engines": {
+    "node": ">=22.13.1"
+  },
   "scripts": {
     "dev": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=development",
     "prod": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=production",
