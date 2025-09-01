@@ -34,8 +34,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.5.4)
       '@types/dotenv-webpack':
-        specifier: ^7.0.7
-        version: 7.0.7(esbuild@0.21.5)(webpack-cli@5.1.4)
+        specifier: ^7.0.8
+        version: 7.0.8(esbuild@0.21.5)(webpack-cli@5.1.4)
       '@types/html-webpack-plugin':
         specifier: ^3.2.9
         version: 3.2.9
@@ -67,8 +67,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.94.0)
       dotenv-webpack:
-        specifier: ^8.1.0
-        version: 8.1.0(webpack@5.94.0)
+        specifier: ^8.1.1
+        version: 8.1.1(webpack@5.94.0)
       esbuild-loader:
         specifier: ^4.2.2
         version: 4.2.2(webpack@5.94.0)
@@ -1493,8 +1493,8 @@ packages:
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
 
-  '@types/dotenv-webpack@7.0.7':
-    resolution: {integrity: sha512-tltVokFUeYuSjNmHc6N892Asu/JIQcnH2iUF5A29/VKqv9opq6KlrmnKd/Lt/bBikV/z0YN2K0kguTwWirYCMQ==}
+  '@types/dotenv-webpack@7.0.8':
+    resolution: {integrity: sha512-JiLJdF2y9dW0eJjKUBlVnIwz/Raej00MOMdKcUuVxYJquvcuMgQdJw7cnN+hRZ7eejYgKr8kZsIw4nihwYYGeA==}
 
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
@@ -2470,8 +2470,8 @@ packages:
   dotenv-defaults@2.0.2:
     resolution: {integrity: sha512-iOIzovWfsUHU91L5i8bJce3NYK5JXeAwH50Jh6+ARUdLiiGlYWfGw6UkzsYqaXZH/hjE/eCd/PlfM/qqyK0AMg==}
 
-  dotenv-webpack@8.1.0:
-    resolution: {integrity: sha512-owK1JcsPkIobeqjVrk6h7jPED/W6ZpdFsMPR+5ursB7/SdgDyO+VzAU+szK8C8u3qUhtENyYnj8eyXMR5kkGag==}
+  dotenv-webpack@8.1.1:
+    resolution: {integrity: sha512-+TY/AJ2k9bU2EML3mxgLmaAvEcqs1Wbv6deCIUSI3eW3Xeo8LBQumYib6puyaSwbjC9JCzg/y5Pwjd/lePX04w==}
     engines: {node: '>=10'}
     peerDependencies:
       webpack: ^4 || ^5
@@ -6799,7 +6799,7 @@ snapshots:
     dependencies:
       '@types/node': 22.5.4
 
-  '@types/dotenv-webpack@7.0.7(esbuild@0.21.5)(webpack-cli@5.1.4)':
+  '@types/dotenv-webpack@7.0.8(esbuild@0.21.5)(webpack-cli@5.1.4)':
     dependencies:
       '@types/node': 22.5.4
       tapable: 2.2.1
@@ -7907,7 +7907,7 @@ snapshots:
     dependencies:
       dotenv: 8.6.0
 
-  dotenv-webpack@8.1.0(webpack@5.94.0):
+  dotenv-webpack@8.1.1(webpack@5.94.0):
     dependencies:
       dotenv-defaults: 2.0.2
       webpack: 5.94.0(esbuild@0.21.5)(webpack-cli@5.1.4)
