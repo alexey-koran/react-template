@@ -17,10 +17,10 @@ importers:
     devDependencies:
       '@alexey-koran/eslint-config':
         specifier: ^0.3.0
-        version: 0.3.0(@eslint/js@9.34.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.22.0(eslint@9.34.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.34.0(jiti@1.21.6))(prettier@3.3.3)(typescript@5.5.4)(webpack@5.94.0)
+        version: 0.3.0(@eslint/js@9.34.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.22.0(eslint@9.34.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.34.0(jiti@1.21.6))(prettier@3.6.2)(typescript@5.5.4)(webpack@5.94.0)
       '@alexey-koran/prettier-config':
         specifier: ^0.1.3
-        version: 0.1.3(prettier@3.3.3)
+        version: 0.1.3(prettier@3.6.2)
       '@alexey-koran/tsconfig':
         specifier: ^0.1.0
         version: 0.1.0
@@ -106,11 +106,11 @@ importers:
         specifier: ^10.3.1
         version: 10.3.1(postcss@8.5.6)
       prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
+        specifier: ^3.6.2
+        version: 3.6.2
       prettier-plugin-tailwindcss:
         specifier: ^0.6.6
-        version: 0.6.6(prettier@3.3.3)
+        version: 0.6.6(prettier@3.6.2)
       react-error-boundary:
         specifier: ^4.0.13
         version: 4.0.13(react@18.3.1)
@@ -128,7 +128,7 @@ importers:
         version: 36.0.1(stylelint@16.9.0(typescript@5.5.4))
       stylelint-prettier:
         specifier: ^5.0.3
-        version: 5.0.3(prettier@3.3.3)(stylelint@16.9.0(typescript@5.5.4))
+        version: 5.0.3(prettier@3.6.2)(stylelint@16.9.0(typescript@5.5.4))
       svgo:
         specifier: 4.0.0-rc.0
         version: 4.0.0-rc.0
@@ -4575,8 +4575,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5543,7 +5543,7 @@ packages:
 
 snapshots:
 
-  '@alexey-koran/eslint-config@0.3.0(@eslint/js@9.34.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.22.0(eslint@9.34.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.34.0(jiti@1.21.6))(prettier@3.3.3)(typescript@5.5.4)(webpack@5.94.0)':
+  '@alexey-koran/eslint-config@0.3.0(@eslint/js@9.34.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.22.0(eslint@9.34.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.34.0(jiti@1.21.6))(prettier@3.6.2)(typescript@5.5.4)(webpack@5.94.0)':
     dependencies:
       '@eslint/js': 9.34.0
       '@stylistic/eslint-plugin-js': 3.0.1(eslint@9.34.0(jiti@1.21.6))
@@ -5555,7 +5555,7 @@ snapshots:
       eslint-import-resolver-webpack: 0.13.10(eslint-plugin-import@2.31.0)(webpack@5.94.0)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.22.0(eslint@9.34.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint-import-resolver-webpack@0.13.10)(eslint@9.34.0(jiti@1.21.6))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.34.0(jiti@1.21.6))
-      eslint-plugin-prettier: 5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@10.0.1(eslint@9.34.0(jiti@1.21.6)))(eslint@9.34.0(jiti@1.21.6))(prettier@3.3.3)
+      eslint-plugin-prettier: 5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@10.0.1(eslint@9.34.0(jiti@1.21.6)))(eslint@9.34.0(jiti@1.21.6))(prettier@3.6.2)
       eslint-plugin-react: 7.37.4(eslint@9.34.0(jiti@1.21.6))
       eslint-plugin-react-hooks: 5.1.0(eslint@9.34.0(jiti@1.21.6))
       globals: 15.14.0
@@ -5569,9 +5569,9 @@ snapshots:
       - typescript
       - webpack
 
-  '@alexey-koran/prettier-config@0.1.3(prettier@3.3.3)':
+  '@alexey-koran/prettier-config@0.1.3(prettier@3.6.2)':
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.6.2
 
   '@alexey-koran/tsconfig@0.1.0': {}
 
@@ -8731,10 +8731,10 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-prettier@5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@10.0.1(eslint@9.34.0(jiti@1.21.6)))(eslint@9.34.0(jiti@1.21.6))(prettier@3.3.3):
+  eslint-plugin-prettier@5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@10.0.1(eslint@9.34.0(jiti@1.21.6)))(eslint@9.34.0(jiti@1.21.6))(prettier@3.6.2):
     dependencies:
       eslint: 9.34.0(jiti@1.21.6)
-      prettier: 3.3.3
+      prettier: 3.6.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.1
     optionalDependencies:
@@ -10424,11 +10424,11 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-tailwindcss@0.6.6(prettier@3.3.3):
+  prettier-plugin-tailwindcss@0.6.6(prettier@3.6.2):
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.6.2
 
-  prettier@3.3.3: {}
+  prettier@3.6.2: {}
 
   pretty-error@4.0.0:
     dependencies:
@@ -11029,9 +11029,9 @@ snapshots:
       postcss-sorting: 8.0.2(postcss@8.5.6)
       stylelint: 16.9.0(typescript@5.5.4)
 
-  stylelint-prettier@5.0.3(prettier@3.3.3)(stylelint@16.9.0(typescript@5.5.4)):
+  stylelint-prettier@5.0.3(prettier@3.6.2)(stylelint@16.9.0(typescript@5.5.4)):
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.6.2
       prettier-linter-helpers: 1.0.0
       stylelint: 16.9.0(typescript@5.5.4)
 
