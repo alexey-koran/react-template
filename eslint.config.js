@@ -41,7 +41,7 @@ const config = [
     },
   },
   {
-    name: 'local/ignores',
+    name: 'global/ignores',
     // The new config system no longer supports .eslintignore files
     // https://eslint.org/blog/2022/10/eslint-v8.25.0-released/#highlights
     ignores: ['build'],
