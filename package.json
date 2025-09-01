@@ -22,7 +22,7 @@
   "homepage": "https://github.com/alexey-koran/react-template#readme",
   "packageManager": "pnpm@10.15.0",
   "engines": {
-    "node": ">=22.13.1"
+    "node": ">=22.19.0"
   },
   "scripts": {
     "dev": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=development",
