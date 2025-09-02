@@ -80,7 +80,6 @@
     "mini-css-extract-plugin": "^2.9.4",
     "postcss": "^8.5.6",
     "postcss-assets": "^6.0.0",
-    "postcss-import": "^16.1.1",
     "postcss-loader": "^8.2.0",
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.6.2",
