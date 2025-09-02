@@ -84,7 +84,7 @@
     "postcss-loader": "^8.2.0",
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.6.6",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "react-error-boundary": "^4.0.13",
     "style-loader": "^4.0.0",
     "stylelint": "^16.23.1",
