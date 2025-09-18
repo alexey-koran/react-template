@@ -43,6 +43,7 @@
     "lint-all": "pnpm prettier && pnpm lint && pnpm lint:css",
     "fix-all": "pnpm prettier:fix && pnpm lint:fix && pnpm lint:css:fix",
     "fix-staged": "lint-staged",
+    "type-check": "tsc --noEmit",
     "test:eslint-config": "eslint-config-inspector",
     "test:webpack-config": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack configtest",
     "svgo": "cross-env svgo $FILE",
