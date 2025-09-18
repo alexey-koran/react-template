@@ -9,7 +9,7 @@ It was created during my time working at a company as a replacement for Create R
 | Node                                                                                                                                        | Package manager                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [![Minimum node version](https://img.shields.io/badge/min%20node-22.19.0-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.9.3-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
-| [![Recommended node version](https://img.shields.io/badge/rec%20node-24.8.0-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-10.16.1-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                    |
+| [![Recommended node version](https://img.shields.io/badge/rec%20node-24.8.0-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-10.17.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                    |
 
 # Installation
 
