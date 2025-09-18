@@ -19,7 +19,7 @@
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "outDir": "./build/",
     "rootDir": "./",
     "typeRoots": [
@@ -28,7 +28,7 @@
     ],
     "paths": {
       "@/*": [
-        "./*"
+        "src/*"
       ]
     },
   }

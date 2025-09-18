@@ -7,6 +7,7 @@ import {
 const config = [
   ...shareableConfig,
   {
+    name: 'local/all',
     files: [supportedFileTypes.all],
     languageOptions: {
       parserOptions: {
@@ -17,7 +18,6 @@ const config = [
       },
     },
     settings: {
-      'import/ignore': 'node_modules', // Temporary fix https://github.com/typescript-eslint/typescript-eslint/issues/9450
       'import/extensions': supportedExtensions.all,
       // start eslint-import-resolver-typescript
       'import/parsers': {
@@ -41,6 +41,7 @@ const config = [
     },
   },
   {
+    name: 'global/ignores',
     // The new config system no longer supports .eslintignore files
     // https://eslint.org/blog/2022/10/eslint-v8.25.0-released/#highlights
     ignores: ['build'],
