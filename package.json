@@ -58,7 +58,7 @@
     "@alexey-koran/eslint-config": "^0.4.0",
     "@alexey-koran/prettier-config": "^0.1.4",
     "@alexey-koran/tsconfig": "^0.1.0",
-    "@eslint/config-inspector": "^1.2.0",
+    "@eslint/config-inspector": "^1.3.0",
     "@eslint/js": "^9.35.0",
     "@svgr/webpack": "^8.1.0",
     "@types/dotenv-webpack": "^7.0.8",
