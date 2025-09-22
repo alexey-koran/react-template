@@ -5,6 +5,7 @@ export default {
   plugins: ['stylelint-prettier'],
   rules: {
     'prettier/prettier': true,
+    'import-notation': null,
     'at-rule-no-unknown': [
       true,
       {
@@ -17,6 +18,7 @@ export default {
           'responsive',
           'screen',
           'reference',
+          'custom-variant',
         ],
       },
     ],
