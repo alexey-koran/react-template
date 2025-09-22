@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 
 import { App } from '@/App';
 
-import '@/styles/index.pcss';
+import '@/styles/global.pcss';
 
 const container = document.getElementById('app');
 
