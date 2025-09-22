@@ -16,8 +16,8 @@ importers:
         version: 19.1.1(react@19.1.1)
     devDependencies:
       '@alexey-koran/eslint-config':
-        specifier: ^0.4.1
-        version: 0.4.1(@eslint/js@9.36.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.44.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2))(eslint@9.36.0(jiti@2.6.0))(prettier@3.6.2)(typescript@5.9.2)(webpack@5.101.3)
+        specifier: ^0.4.2
+        version: 0.4.2(@eslint/js@9.36.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.44.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2))(eslint@9.36.0(jiti@2.6.0))(prettier@3.6.2)(typescript@5.9.2)(webpack@5.101.3)
       '@alexey-koran/prettier-config':
         specifier: ^0.1.4
         version: 0.1.4(prettier@3.6.2)
@@ -156,8 +156,8 @@ importers:
 
 packages:
 
-  '@alexey-koran/eslint-config@0.4.1':
-    resolution: {integrity: sha512-tSzyKf72k40cjp86kOqHQU/llw26e+gTB+nnTMN8P323mPQ5W9EkwUXcYsNEyGsJ7z9s7P7SlViIzgWsjjYnhA==}
+  '@alexey-koran/eslint-config@0.4.2':
+    resolution: {integrity: sha512-0pxXXy8DuB1BLVibCCRfGraOGEQgwiqjAwnM1C1SunwEQktqW0fDmZjet972Ys1bEu+hEyaWMrNoe2OlNM2/Cg==}
     peerDependencies:
       '@eslint/js': '>=9.36.0'
       eslint: '>=9.36.0'
@@ -1366,6 +1366,12 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@stylistic/eslint-plugin@5.4.0':
+    resolution: {integrity: sha512-UG8hdElzuBDzIbjG1QDwnYH0MQ73YLXDFHgZzB4Zh/YJfnw8XNsloVtytqzx0I2Qky9THSdpTmi8Vjn/pf/Lew==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: '>=9.0.0'
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0':
     resolution: {integrity: sha512-b9MIk7yhdS1pMCZM8VeNfUlSKVRhsHZNMl5O9SfaX0l0t5wjdgu4IDzGB8bpnGBBOjGST3rRFVsaaEtI4W6f7g==}
@@ -5178,9 +5184,10 @@ packages:
 
 snapshots:
 
-  '@alexey-koran/eslint-config@0.4.1(@eslint/js@9.36.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.44.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2))(eslint@9.36.0(jiti@2.6.0))(prettier@3.6.2)(typescript@5.9.2)(webpack@5.101.3)':
+  '@alexey-koran/eslint-config@0.4.2(@eslint/js@9.36.0)(@types/eslint@9.6.1)(@typescript-eslint/parser@8.44.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2))(eslint@9.36.0(jiti@2.6.0))(prettier@3.6.2)(typescript@5.9.2)(webpack@5.101.3)':
     dependencies:
       '@eslint/js': 9.36.0
+      '@stylistic/eslint-plugin': 5.4.0(eslint@9.36.0(jiti@2.6.0))
       eslint: 9.36.0(jiti@2.6.0)
       eslint-config-prettier: 10.1.8(eslint@9.36.0(jiti@2.6.0))
       eslint-import-resolver-typescript: 4.4.4(eslint-plugin-import@2.32.0)(eslint@9.36.0(jiti@2.6.0))
@@ -6539,6 +6546,16 @@ snapshots:
   '@polka/url@1.0.0-next.29': {}
 
   '@rtsao/scc@1.1.0': {}
+
+  '@stylistic/eslint-plugin@5.4.0(eslint@9.36.0(jiti@2.6.0))':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.9.0(eslint@9.36.0(jiti@2.6.0))
+      '@typescript-eslint/types': 8.44.0
+      eslint: 9.36.0(jiti@2.6.0)
+      eslint-visitor-keys: 4.2.1
+      espree: 10.4.0
+      estraverse: 5.3.0
+      picomatch: 4.0.3
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.28.4)':
     dependencies:
