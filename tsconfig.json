@@ -14,22 +14,15 @@
     "./**/*.ctsx",
     "./**/*.mtsx"
   ],
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "baseUrl": ".",
     "outDir": "./build/",
     "rootDir": "./",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/types"
-    ],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+      "@/*": ["src/*"]
+    }
   }
 }
