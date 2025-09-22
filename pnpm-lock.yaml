@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@tailwindcss/postcss':
-        specifier: ^4.1.13
-        version: 4.1.13
       react:
         specifier: ^19.1.1
         version: 19.1.1
@@ -36,6 +33,9 @@ importers:
       '@svgr/webpack':
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.9.2)
+      '@tailwindcss/postcss':
+        specifier: ^4.1.13
+        version: 4.1.13
       '@types/dotenv-webpack':
         specifier: ^7.0.8
         version: 7.0.8(esbuild@0.25.10)(webpack-cli@6.0.1)
