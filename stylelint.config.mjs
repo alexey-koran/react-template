@@ -19,6 +19,7 @@ export default {
           'screen',
           'reference',
           'custom-variant',
+          'theme',
         ],
       },
     ],

@@ -1,6 +1,6 @@
 {
   "*.{js,cjs,mjs,jsx,cjsx,mjsx,ts,cts,mts,tsx,ctsx,mtsx}": [
-    "pnpm prettier:fix",
+    "prettier --write",
     "pnpm lint:fix-staged"
   ],
   "*.{css,pcss}": ["pnpm lint:css:fix-staged"]
