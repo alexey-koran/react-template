@@ -70,7 +70,7 @@
     "@types/webpack-bundle-analyzer": "^4.7.0",
     "clsx": "^2.1.1",
     "copy-webpack-plugin": "^13.0.1",
-    "cross-env": "^10.0.0",
+    "cross-env": "^10.1.0",
     "css-loader": "^7.1.2",
     "dotenv-webpack": "^8.1.1",
     "esbuild-loader": "^4.3.0",
