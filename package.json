@@ -24,6 +24,10 @@
   "engines": {
     "node": ">=22.20.0"
   },
+  "imports": {
+    "#tailwind.css": "./src/styles/tailwind.css",
+    "#global.pcss": "./src/styles/global.pcss"
+  },
   "scripts": {
     "dev": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=development",
     "prod": "node --import ./src/ts-node.register.mjs node_modules/webpack/bin/webpack serve --color --hot --mode=production",
