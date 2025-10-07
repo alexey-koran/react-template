@@ -50,8 +50,8 @@
     "svgo-all": "svgo -r -f src"
   },
   "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@alexey-koran/eslint-config": "^0.4.2",
