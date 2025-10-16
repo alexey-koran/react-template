@@ -32,7 +32,7 @@ pnpm i
 
 This guide explains how to update your project that was originally created from the [alexey-koran/react-template](https://github.com/alexey-koran/react-template) repository
 
-### Preparation
+### 1. Preparation
 
 Make sure the original template repository is added as a remote:
 
@@ -46,19 +46,19 @@ If you don’t see upstream, add it manually:
 git remote add upstream https://github.com/alexey-koran/react-template.git
 ```
 
-### Fetch the latest changes from the template repository:
+### 2. Fetch the latest changes from the template repository:
 
 ```bash
 git fetch upstream
 ```
 
-### Create an Update Branch
+### 3. Create an Update Branch
 
 ```bash
 git checkout -b update-template
 ```
 
-### Merge Template Changes
+### 4. Merge Template Changes
 
 Perform a squash merge to bring in the latest updates without preserving the template’s commit history
 
@@ -68,9 +68,15 @@ git merge --squash upstream/main --allow-unrelated-histories
 
 The `--allow-unrelated-histories` flag is required if your project and the template do not share a common commit history
 
-### Resolve any merge conflicts if they occur
+### 5. Resolve any merge conflicts if they occur
 
-### Create a Pull Request
+If merge conflicts occur
+
+Open the conflicting files and fix them manually
+
+Stage and commit your changes
+
+### 6. Create a Pull Request
 
 Push your update branch to the remote repository:
 
@@ -82,7 +88,7 @@ Create a pull request from your update branch to the main branch of your reposit
 
 Review the changes, test your project, and merge the PR once everything looks good
 
-### After merging, clean up the update branch:
+### 7. After merging, clean up the update branch:
 
 ```bash
 git branch -d update-template
