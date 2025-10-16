@@ -20,7 +20,7 @@
     "react boilerplate"
   ],
   "homepage": "https://github.com/alexey-koran/react-template#readme",
-  "packageManager": "pnpm@10.18.1",
+  "packageManager": "pnpm@10.18.3",
   "engines": {
     "node": ">=22.20.0"
   },
