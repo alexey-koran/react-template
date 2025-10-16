@@ -26,6 +26,75 @@ cd project_location
 pnpm i
 ```
 
+<details open>
+
+<summary><h2>Updating from Template</h2></summary>
+
+This guide explains how to update your project that was originally created from the [alexey-koran/react-template](https://github.com/alexey-koran/react-template) repository
+
+### Preparation
+
+Make sure the original template repository is added as a remote:
+
+```bash
+git remote -v
+```
+
+If you don’t see upstream, add it manually:
+
+```bash
+git remote add upstream https://github.com/alexey-koran/react-template.git
+```
+
+### Fetch the latest changes from the template repository:
+
+```bash
+git fetch upstream
+```
+
+### Create an Update Branch
+
+```bash
+git checkout -b update-template
+```
+
+### Merge Template Changes
+
+Perform a squash merge to bring in the latest updates without preserving the template’s commit history
+
+```bash
+git merge --squash upstream/main --allow-unrelated-histories
+```
+
+> [!NOTE]
+> The `--allow-unrelated-histories` flag is required if your project and the template do not share a common commit history
+
+### Resolve any merge conflicts if they occur
+
+### Create a Pull Request
+
+Push your update branch to the remote repository:
+
+```bash
+git push origin update-template
+```
+
+Create a pull request from your update branch to the main branch of your repository
+
+Review the changes, test your project, and merge the PR once everything looks good
+
+> [!TIP]
+> Update your project regularly to stay in sync with improvements from the template
+>
+> After merging, clean up the update branch:
+>
+> ```bash
+> git branch -d update-template
+> git push origin --delete update-template
+> ```
+
+</details>
+
 # Scripts
 
 > [!IMPORTANT]
@@ -43,7 +112,7 @@ http://localhost:8080/
 
 <details open>
 
-<summary><h3>Scripts table</h3></summary>
+<summary><h2>Scripts table</h2></summary>
 
 | Command                    | Description                                              | Path                            |
 | -------------------------- | -------------------------------------------------------- | ------------------------------- |
@@ -92,7 +161,7 @@ http://localhost:8080/
 
 <details open>
 
-<summary><h3>Dependencies table</h3></summary>
+<summary><h2>Dependencies table</h2></summary>
 
 | Package name                   | Description                                                                                                                             | Version                                                                 |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
