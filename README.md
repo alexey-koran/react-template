@@ -11,7 +11,7 @@ It was created during my time working at a company as a replacement for Create R
 | [![Minimum node version](https://img.shields.io/badge/min%20node-22.20.0-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.9.3-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
 | [![Recommended node version](https://img.shields.io/badge/rec%20node-25.0.0-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-10.17.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                    |
 
-# Installation
+## Installation
 
 > [!TIP]
 > Highly recommend
@@ -66,8 +66,7 @@ Perform a squash merge to bring in the latest updates without preserving the tem
 git merge --squash upstream/main --allow-unrelated-histories
 ```
 
-> [!NOTE]
-> The `--allow-unrelated-histories` flag is required if your project and the template do not share a common commit history
+The `--allow-unrelated-histories` flag is required if your project and the template do not share a common commit history
 
 ### Resolve any merge conflicts if they occur
 
@@ -83,19 +82,19 @@ Create a pull request from your update branch to the main branch of your reposit
 
 Review the changes, test your project, and merge the PR once everything looks good
 
-> [!TIP]
-> Update your project regularly to stay in sync with improvements from the template
->
-> After merging, clean up the update branch:
->
-> ```bash
-> git branch -d update-template
-> git push origin --delete update-template
-> ```
+### After merging, clean up the update branch:
+
+```bash
+git branch -d update-template
+git push origin --delete update-template
+```
 
 </details>
 
-# Scripts
+> [!TIP]
+> Update your project regularly to stay in sync with improvements from the template
+
+## Scripts
 
 > [!IMPORTANT]
 > Development server use the **8080** port
@@ -112,7 +111,7 @@ http://localhost:8080/
 
 <details open>
 
-<summary><h2>Scripts table</h2></summary>
+<summary><h3>Scripts table</h3></summary>
 
 | Command                    | Description                                              | Path                            |
 | -------------------------- | -------------------------------------------------------- | ------------------------------- |
@@ -153,7 +152,7 @@ http://localhost:8080/
 
 </details>
 
-# Dependencies
+## Dependencies
 
 > [!NOTE]
 >
@@ -161,7 +160,7 @@ http://localhost:8080/
 
 <details open>
 
-<summary><h2>Dependencies table</h2></summary>
+<summary><h3>Dependencies table</h3></summary>
 
 | Package name                   | Description                                                                                                                             | Version                                                                 |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
