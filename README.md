@@ -9,9 +9,9 @@ It was created during my time working at a company as a replacement for Create R
 | Node                                                                                                                                        | Package manager                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [![Minimum node version](https://img.shields.io/badge/min%20node-22.20.0-orange?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)  | [![Minimum npm version](https://img.shields.io/badge/min%20npm-10.9.3-orange?style=for-the-badge&logo=npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) |
-| [![Recommended node version](https://img.shields.io/badge/rec%20node-24.9.0-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-10.17.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                    |
+| [![Recommended node version](https://img.shields.io/badge/rec%20node-25.0.0-blue?style=for-the-badge&logo=node.js)](https://nodejs.org/en/) | [![Recommended pnpm](https://img.shields.io/badge/rec%20pnpm-10.17.0-blue?style=for-the-badge&logo=pnpm)](https://pnpm.io/)                                                    |
 
-# Installation
+## Installation
 
 > [!TIP]
 > Highly recommend
@@ -26,7 +26,81 @@ cd project_location
 pnpm i
 ```
 
-# Scripts
+<details open>
+
+<summary><h2>Updating from Template</h2></summary>
+
+This guide explains how to update your project that was originally created from the [alexey-koran/react-template](https://github.com/alexey-koran/react-template) repository
+
+### 1. Preparation
+
+Make sure the original template repository is added as a remote:
+
+```bash
+git remote -v
+```
+
+If you don’t see upstream, add it manually:
+
+```bash
+git remote add upstream https://github.com/alexey-koran/react-template.git
+```
+
+### 2. Fetch the latest changes from the template repository:
+
+```bash
+git fetch upstream
+```
+
+### 3. Create an Update Branch
+
+```bash
+git checkout -b update-template
+```
+
+### 4. Merge Template Changes
+
+Perform a squash merge to bring in the latest updates without preserving the template’s commit history
+
+```bash
+git merge --squash upstream/main --allow-unrelated-histories
+```
+
+The `--allow-unrelated-histories` flag is required if your project and the template do not share a common commit history
+
+### 5. Resolve any merge conflicts if they occur
+
+If merge conflicts occur
+
+Open the conflicting files and fix them manually
+
+Stage and commit your changes
+
+### 6. Create a Pull Request
+
+Push your update branch to the remote repository:
+
+```bash
+git push origin update-template
+```
+
+Create a pull request from your update branch to the main branch of your repository
+
+Review the changes, test your project, and merge the PR once everything looks good
+
+### 7. After merging, clean up the update branch:
+
+```bash
+git branch -d update-template
+git push origin --delete update-template
+```
+
+</details>
+
+> [!TIP]
+> Update your project regularly to stay in sync with improvements from the template
+
+## Scripts
 
 > [!IMPORTANT]
 > Development server use the **8080** port
@@ -84,7 +158,7 @@ http://localhost:8080/
 
 </details>
 
-# Dependencies
+## Dependencies
 
 > [!NOTE]
 >
